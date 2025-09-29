@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template string</title>
+  </head>
+  <body>
+    <h1>Template String</h1>
+
+    <script type="text/javascript">
+      var fullname;
+      fullname = "aung kyaw kyaw";
+      console.log(fullname);
+
+      var nickname;
+      console.log(nickname);
+
+      let familyname;
+      console.log(familyname);
+
+      let aliasname;
+      aliasname = "nu nu";
+      console.log(aliasname);
+
+      //   const lastname;  ==> const ka value ma pay bae declare lote loa ma ya buu
+      //   console.log(lastname);
+
+      const name = "John Doe";
+      const age = 23;
+      const job = "Model";
+      const city = "Yangon";
+
+      // document.write()
+      document.write(`My name is ${name}, I am ${age} years old , I am a ${job} and I live in ${city}.`);
+
+      let myheading;
+
+      myheading = "<h1>hello world</h1>";
+      myheading = "<h1>hello Human</h1>";
+
+      document.write(myheading);
+      console.log(myheading);
+
+      let myliststyle;
+      myliststyle = "<ul><li>Name : name</li> <li>Age: age</li><li>Job: job</li><li>City: city</li></ul>";
+      document.write(myliststyle);
+
+      myliststyle = `
+        <ul>
+            <li>Name : ${name}</li> 
+            <li>Age: ${age}</li>
+            <li>Job: ${job}</li>
+            <li>City: ${city}</li>
+        </ul>
+        `;
+
+      document.write(myliststyle);
+    </script>
+  </body>
+</html>

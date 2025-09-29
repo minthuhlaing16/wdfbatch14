@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Method</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log("String Method");
+      console.log("___________________________________________________");
+      let firstname = "John";
+      let lastname = "Doe";
+      //   console.log(firstname);
+      //   console.log(lastname);
+      //   console.log(firstname, lastname);
+      //   console.log(firstname.length);
+      //   ==> concat (+)
+      let fullname = firstname + " " + lastname;
+      console.log(fullname);
+      // concat(.concat())
+      fullname = firstname.concat(lastname);
+      fullname = lastname.concat(firstname);
+      //   console.log(fullname);
+      // Append (+=)
+      let name1 = "bob";
+      let name2 = "alex";
+      console.log(name1 + name2);
+      console.log(name1.concat(name2));
+      //   name1 = name2;
+      name1 += name2;
+      console.log(name1);
+      let num1 = 10;
+      let num2 = 20;
+      console.log(num1);
+      console.log(num2);
+      num1 += num2;
+      console.log(num1);
+      console.log(num2);
+      // String is character array in js
+      let myfriend = "Hello aung aung how are you?";
+      console.log(myfriend);
+      console.log(typeof myfriend);
+      console.log(myfriend.length);
+      console.log(myfriend[0]);
+      console.log(myfriend[myfriend.length - 1]);
+      // charAt(index) index pay pee value yuu tar
+      console.log(myfriend.charAt(4));
+      console.log(myfriend.charAt(myfriend.length - 1));
+      // indexOf(value) value pay pee index yuu tar
+      let familyName = "Tun Win";
+      console.log(familyName.indexOf("n")); // first n ko htoke pay tar
+      // lastIndexOf(value)
+      console.log(familyName.lastIndexOf("n")); // dar kya top nout sone index ko htoke pay mar
+      console.log(familyName.indexOf("T"));
+      console.log(familyName.indexOf("S")); // array mar -1 so ma shi tar ko so lol tal
+      // padStart()
+      let mynum = "7";
+      console.log(mynum.padStart(3, "0"));
+      // padEnd()
+      let yournum = "7";
+      console.log(yournum.padEnd(3, "0"));
+      // repeat(count)
+      const greet = "Hello sir ";
+      console.log(greet.repeat(100));
+      // includes(value) , return boolean
+      let favcolor = "My fav color is black color.";
+      console.log(favcolor.includes("black"));
+      console.log(favcolor.includes("red"));
+      console.log(favcolor.includes("Black"));
+      // replace(old,new)
+      console.log(favcolor.replace("My", "Your"));
+      console.log(favcolor.replace("fav", "dislike"));
+      console.log(favcolor.replace("color", "colour"));
+      // ==> replaceAll(old,new)
+      console.log(favcolor.replaceAll("color", "colour")); // My fav colour is black colour.
+      // startsWith(value,index) ==> return boolean
+      let greeting = "Dear U Ba";
+      console.log(greeting.startsWith("Dear")); // true
+      console.log(greeting.startsWith("D")); // true
+      console.log(greeting.startsWith("d")); // false
+      console.log(greeting.startsWith("U", 5)); // true
+      console.log(greeting.startsWith("Ba", 7)); // true
+      // endsWith(value,length) ==> return boolean
+      const nickname = "The Rock";
+      console.log(nickname.endsWith("Rock")); // true
+      console.log(nickname.endsWith("k")); // true
+      console.log(nickname.endsWith("K")); // false
+      console.log(nickname.endsWith("Rock", nickname.length)); // true
+      console.log(nickname.endsWith("R", nickname.length - 3)); // true
+      console.log(nickname.endsWith("e", nickname.length - 5)); // true
+      // substring(index start,length end); substr() => short form of substring
+      const content =
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quaerat perferendis libero aut ipsam magnam dolore, quae eligendi nemo nam? Voluptatibus quis ducimus laboriosam optio! Pariatur quis ipsa dolores. Quidem.";
+      console.log(content);
+      console.log(content.substring(0, 21) + "...");
+      console.log(content.substring(0, 21).concat("---"));
+      console.log(content.substr(0, 20));
+      console.log(content.substr(0, 10));
+      console.log(content.substring(1, 5));
+      // slice(start,end)
+      const info = "hello my name is John Doe. I am a programmer..";
+      console.log(info.slice(0, 5));
+      console.log(info.slice(1, 5));
+      console.log(info.slice(0, 5) + "...");
+      console.log(info.slice(0, 5).concat("****"));
+      // substring nae slice nae ma tuu buu
+      let mylang = "Javascript";
+      console.log(mylang.substring(0, 4)); // Java
+      console.log(mylang.substring(4, 0)); // Java
+      console.log(mylang.slice(0, 4)); // Java
+      console.log(mylang.slice(4, 0)); // bar mha ma hwat top buu
+      // split(seperator), split(seperator,limit)
+      let students = "John Doe, Aung Aung, Maung Muang, Susan, Bob , Alice";
+      console.log(students); // John Doe, Aung Aung, Maung Muang, Susan, Bob , Alice
+      console.log(typeof students); // String
+      console.log(students.split(",")); // ['John Doe', ' Aung Aung', ' Maung Muang', ' Susan', ' Bob ', ' Alice']
+      console.log(typeof students.split(",")); // object
+      console.log(students.split("/")); // ['John Doe, Aung Aung, Maung Muang, Susan, Bob , Alice']
+      let fruits = "Apple/Banana/Mango/Cherry/Orange";
+      console.log(fruits); // Apple/Banana/Mango/Cherry/Orange
+      console.log(fruits.split("/")); // ['Apple', 'Banana', 'Mango', 'Cherry', 'Orange']
+      console.log(fruits.split("/", 2)); // (2) ['Apple', 'Banana']
+      console.log(students.split(",", 3)); // (3) ['John Doe', ' Aung Aung', ' Maung Muang']
+      let text = "hello";
+      let splitletter = text.split("");
+      let splitword = text.split(" ");
+      console.log(splitletter); // ['h', 'e', 'l', 'l', 'o']
+      console.log(splitword); // ['hello']
+      // trim(),trimStart(),trimEnd(),trimLeft(),trimRight()
+      let password = "    hello     ";
+      console.log(password);
+      console.log(password.trim());
+      console.log(password.trimStart());
+      console.log(password.trimEnd());
+      let name = "AUNG KYAW KYAW";
+      let tolower = name.toLowerCase();
+      let toupper = tolower.toUpperCase();
+      console.log(name);
+      console.log(tolower);
+      console.log(toupper);
+    </script>
+  </body>
+</html>

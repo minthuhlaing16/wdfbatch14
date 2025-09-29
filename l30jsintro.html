@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Intro</title>
+  </head>
+  <body>
+    <h1>Js Intro</h1>
+
+    <script type="text/javascript">
+      // String
+      console.log("hello world from js");
+      console.log("hello kyaw kyaw");
+      console.log(`js intro`);
+      console.log("200");
+      console.log("tun tun", "kyaw kyaw");
+
+      // Number
+      console.log(12);
+      console.log(12, 123);
+      console.log("john doe", 23, true);
+
+      console.log(2 + 2);
+      console.log(2 + "20");
+      console.log("20" + "20");
+      console.log(2 - 2);
+      console.log(2 * 2);
+      console.log(2 / 2);
+      console.log(2 % 2);
+      console.log("aung aung" + 10);
+      console.log(true + 1);
+      console.log(false + 1);
+      console.log("zaw zaw" + false);
+
+      // ==> Alert
+      // window.alert("hello World how are you?");
+      // window.alert("Save Myanmar");
+      // window.alert("Are you ready to study js ?");
+
+      // Variable (var,let,const);
+      let fullname = "Moe Kyaw";
+      console.log(fullname);
+      // alert(fullname);
+
+      console.log("My friend name is fullname");
+      console.log("My friend name is fullname");
+
+      // backticks(``)
+      console.log(`My friend name is ${fullname}`);
+      console.log(`the sum of 1 + 1 is = ${1 + 1}`);
+      console.log(`${1}` + `${2}`); // ==> "1" + "2" == 12
+      console.log(`${1 + 2}`);
+      console.log(typeof `${1 + 2}`);
+
+      console.log("My friend name is ", fullname);
+
+      // Concatenate(+)
+      console.log("My friend name is " + fullname);
+      console.log("My friend name is" + " " + fullname);
+
+      var num1 = 100;
+      const num2 = 200;
+
+      console.log(num1);
+      console.log(num2);
+      console.log(num1, num2);
+      console.log(num1 + num2);
+
+      console.log(typeof "aung aung");
+      console.log(typeof 12);
+      console.log(typeof true);
+
+      // ==> overwrite,override
+
+      let num3 = 30;
+      let num4 = 40;
+
+      console.log("the value of num3 is " + num3);
+      console.log("the value of num4 is " + num4);
+      console.log("the sum of num3 and num4 is " + (num3 + num4));
+
+      num3 = 50;
+      console.log("the value of num3 is " + num3);
+      console.log("the value of num4 is " + num4);
+      console.log("the sum of num3 and num4 is " + (num3 + num4));
+
+      let num5 = 20;
+      console.log(num5);
+      num5 = 30;
+      console.log(num5);
+
+      const num6 = 10;
+      console.log(num6);
+      // num6 = 20;
+      // console.log(num6); => const ka override lote loa ma ya buu
+
+      // Special Escape Character(/)
+      console.log("hey I am working. Do you see me ?");
+      console.log("hay I am 'working'. Do you see me ?");
+      console.log('hay I am "working". Do you see me ?');
+      console.log("hello My name is John . \n how are you ? \n I am professional web developer..");
+    </script>
+  </body>
+</html>

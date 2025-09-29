@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and Time</title>
+  </head>
+  <body>
+    <div>
+      <small>© <span id="autoyear"></span> Al Jazeera Media Network</small>
+    </div>
+
+    <script type="text/javascript">
+      let mydate = new Date(); // class object
+
+      console.log(mydate); // Mon Sep 22 2025 10:23:58 GMT+0630 (Myanmar Time)
+      console.log(typeof mydate); // object
+      console.log(new Date()); // Mon Sep 22 2025 10:24:19 GMT+0630 (Myanmar Time)
+
+      console.log(new Date().getDate()); // 22
+
+      let getdate = mydate.getDate();
+      console.log(getdate); // 22
+
+      let hour = new Date().getHours();
+      console.log(hour);
+
+      let minute = new Date().getMinutes();
+      console.log(minute);
+
+      let second = mydate.getSeconds();
+      console.log(second);
+
+      let milisecond = mydate.getMilliseconds();
+      console.log(milisecond);
+
+      let time = mydate.getTime();
+      console.log(time); // 1758514558688 ===> miliseconds tway ko paung htr tar ==> 1 Jan 1970 -> up to now
+
+      let now = Date.now();
+      console.log(now);
+
+      let month = mydate.getMonth();
+      console.log(month); // 8 ==> ['jan' ,'feb','mar','april',...] == [0,1,2,3,4,...];
+
+      let day = mydate.getDay();
+      console.log(day); // 1 ==> ["sun","mon","tues","wed","thur","fri","sat"] ==> [0,1,2,...];
+
+      let year = mydate.getFullYear();
+      console.log(year); // 2025
+
+      //   utc == Coordinated Universal Time
+      let utcyear = mydate.getUTCFullYear();
+      console.log(utcyear); // 2025
+
+      //   console.log(mydate.getUTCDate());
+      //   console.log(mydate.getUTCDay());
+      //   console.log(mydate.getUTCHours());
+      //   console.log(mydate.getUTCMinutes());
+      //   console.log(mydate.getUTCSeconds());
+
+      let getautoyear = document.getElementById("autoyear");
+      console.log(getautoyear);
+      //   getautoyear.textContent = mydate.getUTCFullYear();
+      //   getautoyear.innerText = mydate.getUTCFullYear();
+      getautoyear.innerHTML = mydate.getUTCFullYear();
+
+      // Date(month day year hour:min:second)
+      let birthday = new Date("5-12-2003"); // Mon May 12 2003 00:00:00 GMT+0630 (Myanmar Time)
+      console.log(birthday);
+
+      let birthday1 = new Date("2-12-2004 11:45:2");
+      birthday1 = new Date("Dec-2-2002");
+      birthday1 = new Date("January-12-1998 1:30:50");
+      birthday1 = new Date("11/15/2010 10:20:15");
+
+      console.log(birthday1);
+      console.log(birthday1.getMonth()); // 10
+      console.log(birthday1.getDay());
+      console.log(birthday1.getFullYear());
+      console.log(birthday1.getHours());
+      console.log(birthday1.getMinutes());
+      console.log(birthday1.getSeconds());
+      console.log(birthday1.getMilliseconds());
+
+      console.log("___________________");
+
+      console.log(birthday1);
+      birthday1.setMonth(0);
+      birthday1.setDate(20);
+      birthday1.setUTCFullYear(2001);
+      birthday1.setHours(12);
+      birthday1.setMinutes(10);
+      birthday1.setSeconds(59);
+      console.log(birthday1);
+    </script>
+  </body>
+</html>

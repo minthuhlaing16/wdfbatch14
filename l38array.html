@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let arrboys = ["john doe", "bob", "alex", "gorge"];
+      let arrgirls = new Array("susan", "alice", "susu", "yuyu", "nunu");
+
+      //   console.log(arrboys);
+      //   console.log(arrgirls);
+      //   console.table(arrboys);
+      //   console.log(arrboys.length);
+      //   console.log(arrgirls.length);
+      //   console.log(arrgirls[arrgirls.length - 1]);
+      //   console.log(typeof arrboys);
+
+      //   console.log(arrboys[0]);
+      //   console.log(typeof arrboys[0]);
+
+      let mixarrs = [
+        "hello",
+        23,
+        true,
+        ["red", "green", "blue"],
+        { isStudent: true, isProgrammer: false },
+        "world",
+        null,
+        undefined,
+        NaN,
+      ];
+
+      //   console.log(mixarrs);
+      //   console.table(mixarrs);
+      //   console.log(mixarrs[0]);
+      //   console.log(mixarrs[1]);
+      //   console.log(mixarrs[2]);
+      //   console.log(mixarrs[3][0]);
+      //   console.log(mixarrs[3][1]);
+      //   console.log(mixarrs[3][2]);
+      //   console.log(mixarrs[4].isProgrammer);
+      //   console.log(mixarrs[4].isStudent);
+      //   console.log(mixarrs[5]);
+      //   console.log(mixarrs[6]);
+      //   console.log(mixarrs[7]);
+      //   console.log(mixarrs[8]);
+
+      let colors = ["red", "green", "blue"];
+
+      colors = ["rgba", "cmyk"];
+
+      console.log(colors);
+      console.log(colors.length);
+
+      let paints = ["red", "green", , "blue"];
+
+      console.log(paints);
+      console.log(paints[2]);
+      console.log(paints.length);
+
+      let users = [];
+
+      users.push("john doe");
+      users.push("susu", "nu nu");
+
+      users.unshift("the rock");
+      users.unshift("triple h", "kane");
+
+      //   users.pop();
+      //   users.pop();
+
+      //   users.shift();
+      //   users.shift();
+
+      console.log(users);
+      console.log(users.length);
+
+      // Nested Array
+
+      const nesarrs = [
+        "red",
+        "green",
+        "blue",
+        ["rgba", "hsla", "hexcolor", ["darkblue", "darkgreen", "darkpurple"], "orange", "purple"],
+        "haha",
+        "hehe",
+      ];
+
+      console.log(nesarrs);
+      console.log(nesarrs.length);
+      console.log(nesarrs[0]);
+      console.log(nesarrs[1]);
+      console.log(nesarrs[2]);
+      console.log(nesarrs[3][0]);
+      console.log(nesarrs[3][1]);
+      console.log(nesarrs[3][2]);
+      console.log(nesarrs[3][3][0]);
+      console.log(nesarrs[3][3][1]);
+      console.log(nesarrs[3][3][2]);
+      console.log(nesarrs[3][4]);
+      console.log(nesarrs[3][5]);
+      console.log(nesarrs[4]);
+      console.log(nesarrs[5]);
+    </script>
+  </body>
+</html>

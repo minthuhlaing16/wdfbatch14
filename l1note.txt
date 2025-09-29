@@ -1,0 +1,62 @@
+Website
+
+Static Website ==> example news;
+
+Dynamic Website ==> example facebook;
+
+Web Developer
+    FrontEnd Developer
+    BackEnd Developer
+    Database Developer
+
+
+html ===> Web Browser(Google Chrome, Mz Firefox, Opera, ME, Safari);
+
+html ==> tag => tags , element => elements
+
+
+www. ko domain name loa khaw tal 
+
+
+user ko phaw pya tat msg twae ka tag ta khu khu hte mar shi ka mal;
+
+HTML ==> HyperText Markup Language  
+
+Comment ==> Single line Comment, Multi line Comment;
+
+    kaung sin tway mhan ta mya ko thu level a lite h1 to h6 pay tal 
+
+    sar pite tway ko kya top p tag hte mar pay tal; sar pite 2 pite yay chin tal so p tag 2 khu tone ka tal; ta khu hte ka width auto phit tal; out ta kyaung sin lae editor mhr bae sin tar browser mar ma sin bu;
+
+    br tag ka line break lote tr; out ta chaung sin tar; self-closing tag;
+
+    b tag bold phit chin yin tone tal;
+
+    u ==> underline tag
+
+    i ==> italic tag
+
+    tags twae ko elements loa lae khaw tal ; Elements 2 myo shi tal ; block elements; inline elements;
+
+    a tag ==> anchor tag (link chate tat nay yar mar tone tar); href ka attribute loa khaw tal; href ==> hypertext reference
+
+    attribute="value" => value mar 2 khu htet khwal tal ==> custom value nae , default value;
+
+    hr ==> (horizontal ruler ==> self closing tag);
+
+    ssl ==> Secure Sockets Layer;
+
+    email poh mal so yin <a href="mailto:abcdef@gmail.com">Email Me</a>
+
+    email poh mal so yin <a href="tel:09123456789">Call Me</a>
+
+    two types of list ==> unordered-list,ordered-list;
+
+    image ==> img ==> selfclosing tag ==> src"" and alt "" ==> width && height ==> inline element;
+
+
+    table tag ==> table ==> tr ==> table row ==> td ==> table data
+
+
+
+    

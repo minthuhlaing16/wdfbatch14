@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Type</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // String
+      let name = "john doe";
+
+      console.log(name);
+      console.log(typeof name);
+      console.info(typeof name);
+      console.warn(name);
+      console.error(name);
+
+      // number
+      let num = 34;
+
+      console.log(num);
+      console.log(typeof num);
+
+      // Boolean
+      let isCar = true;
+
+      console.log(isCar);
+      console.log(typeof isCar);
+
+      // object
+      let arr = ["string", 23, true];
+
+      console.log(arr);
+      console.log(typeof arr);
+
+      // object
+      let date = new Date();
+      console.log(date);
+      console.log(typeof date);
+
+      // object (Javascript Object)
+      const address = {
+        no: "103",
+        street: "bo soon pat lan",
+        city: "Yangon",
+        country: "Myanmar",
+      };
+
+      console.log(address);
+      console.log(typeof address);
+      console.log(address.no);
+      console.log(address.street);
+      console.log(address.city);
+      console.log(address.country);
+      console.log(typeof address.country);
+      address.greeting = "hello world My name is John Doe";
+      console.log(address);
+      console.log(address["country"]);
+
+      // Array
+      colors = ["red", "green", "blue", "orange", "black"];
+      console.log(colors);
+      console.log(typeof colors);
+      console.log(colors[0]);
+      console.log(colors.length);
+      console.log(colors[colors.length - 1]); // nout sone a khan ko htoke tar
+      console.log(typeof colors[colors.length - 1]); // nout sone a khan ko htoke tar
+
+      let fullname;
+      console.log(fullname);
+      console.log(typeof fullname);
+
+      let info = {
+        name: "John Doe",
+      };
+
+      console.log(info);
+
+      let nickname = "";
+      console.log(nickname);
+      console.log(typeof nickname); // String
+
+      let car = null;
+      console.log(car);
+      console.log(typeof car);
+    </script>
+  </body>
+</html>

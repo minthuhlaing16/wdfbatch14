@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Method</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log("Array Methods");
+      console.log("______________________________________________________");
+      const arrcolors = ["red", "green", "blue", "purple", "orange", "pink"];
+      console.log(arrcolors);
+      console.log(typeof arrcolors); // object
+      console.log(arrcolors.length); // 6
+      // Array.isArray(value); return boolean
+      const name = "aung aung";
+      console.log(Array.isArray(name)); // false
+      console.log(Array.isArray(arrcolors)); // true
+      // flat(depth),default 1; flat(Infinity) ==> a kone lone ko pyii cha tar
+      const fruits = ["apple", "mango", "banana", "orange", [1, 2, 3], "pineapple"];
+      console.log(fruits); // (6) ['apple', 'mango', 'banana', 'orange', Array(3), 'pineapple']
+      console.log(fruits.flat()); // (8) ['apple', 'mango', 'banana', 'orange', 1, 2, 3, 'pineapple']
+      console.log(fruits.flat(1)); // (8) ['apple', 'mango', 'banana', 'orange', 1, 2, 3, 'pineapple']
+      let mixarrs = ["john doe", 12, true, ["name", "age", "gender", ["apple", "orange", "mango"], "car", false]];
+      console.log(mixarrs); // ['john doe', 12, true, Array(6)]
+      console.log(mixarrs.flat()); // (9) ['john doe', 12, true, 'name', 'age', 'gender', Array(3), 'car', false]
+      console.log(mixarrs.flat(Infinity)); // (11) ['john doe', 12, true, 'name', 'age', 'gender', 'apple', 'orange', 'mango', 'car', false]
+      // indexOf(value)
+      let colors = ["red", "green", "blue", "black", "blue", "green", "red"];
+      console.log(colors);
+      console.log(colors.indexOf("black")); // 3
+      console.log(colors.indexOf("green")); // 1
+      console.log(colors.indexOf("Black")); // -1
+      // lastIndexOf(value)
+      console.log(colors.lastIndexOf("green")); // 5
+      console.log(colors.lastIndexOf("red")); // 6
+      console.log(colors.lastIndexOf("Black")); // -1
+      // join(delimiter)
+      let names = ["john doe", "susan", "bob", "alice", "mr white"];
+      console.log(names); // (5) ['john doe', 'susan', 'bob', 'alice', 'mr white']
+      console.log(String(names)); // john doe,susan,bob,alice,mr white
+      console.log(names.toString()); // john doe,susan,bob,alice,mr white
+      console.log(names.join()); // john doe,susan,bob,alice,mr white
+      console.log(names.join("")); // john doesusanbobalicemr white
+      console.log(names.join(" ")); // john doe susan bob alice mr white
+      console.log(names.join("_")); // john doe_susan_bob_alice_mr white
+      const candies = ["red", "green", "blue", "white", "black"];
+      console.log(candies); // (5) ['red', 'green', 'blue', 'white', 'black']
+      console.log(candies.length); // 5
+      // push(value) ==> a nout ka twr htae tar
+      candies.push("orange");
+      console.log(candies); // (6) ['red', 'green', 'blue', 'white', 'black', 'orange']
+      console.log(candies.length); // 6
+      candies.push("john doe", "bob");
+      console.log(candies); // (8) ['red', 'green', 'blue', 'white', 'black', 'orange', 'john doe', 'bob']
+      console.log(candies.length); // 8
+      // pop() a nout ka nay del tar ==> index kaw value kaw del twr tar
+      candies.pop();
+      console.log(candies); // (7) ['red', 'green', 'blue', 'white', 'black', 'orange', 'john doe']
+      console.log(candies.length); // 7
+      // unshift(value) ==> a shae ka nay toe tar
+      let arr = ["hello"];
+      console.log(arr); // ['hello']
+      console.log(arr.length); // 1
+      arr.unshift("John Doe");
+      console.log(arr); // ['John Doe', 'hello']
+      console.log(arr.length); // 2
+      // shift() ==> a shae ka nay del tar ==> index kaw value kaw del twr tar
+      arr.shift();
+      console.log(arr); // ['hello']
+      console.log(arr.length); // 1
+      // delete ==> keyword ==> remove only value
+      let users = ["John Doe", "Alice", "Bob", "The Rock", "Stone Cold"];
+      console.log(users); // (5) ['John Doe', 'Alice', 'Bob', 'The Rock', 'Stone Cold']
+      console.log(users.length); // 5
+      delete users[3];
+      delete users[1];
+      console.log(users); // (5) ['John Doe', empty, 'Bob', empty, 'Stone Cold']
+      console.log(users.length); // 5
+      // slice(index start,index end) ===> start to end (not inclusive)
+      let staffs = ["aye aye", "mya mya", "hla hla", "wa wa"];
+      console.log(staffs); // ['aye aye', 'mya mya', 'hla hla', 'wa wa']
+      console.log(staffs.slice(0, 3)); // ['aye aye', 'mya mya', 'hla hla']
+      console.log(staffs.slice(1, 2)); // ['mya mya']
+      // concat()
+      let arrboys = ["aung aung", "maung maung", "bob", "john"];
+      let arrgirls = ["susan", "myo myo", "chaw chaw", "hla hla"];
+      console.log(arrboys); // (4) ['aung aung', 'maung maung', 'bob', 'john']
+      console.log(arrgirls); // (4) ['susan', 'myo myo', 'chaw chaw', 'hla hla']
+      console.log(arrboys + arrgirls); // aung aung,maung maung,bob,johnsusan,myo myo,chaw chaw,hla hla
+      console.log(arrboys.concat(arrgirls)); // (8) ['aung aung', 'maung maung', 'bob', 'john', 'susan', 'myo myo', 'chaw chaw', 'hla hla']
+      console.log(arrgirls.concat(arrboys)); // (8) ['susan', 'myo myo', 'chaw chaw', 'hla hla', 'aung aung', 'maung maung', 'bob', 'john']
+      let combinearrs = arrboys.concat(arrgirls);
+      console.log(combinearrs); // ['aung aung', 'maung maung', 'bob', 'john', 'susan', 'myo myo', 'chaw chaw', 'hla hla']
+      // sort() ==> a to z
+      console.log(combinearrs.sort()); // ['aung aung', 'bob', 'chaw chaw', 'hla hla', 'john', 'maung maung', 'myo myo', 'susan']
+      // reverse()
+      console.log(combinearrs.reverse()); // ['susan', 'myo myo', 'maung maung', 'john', 'hla hla', 'chaw chaw', 'bob', 'aung aung']
+    </script>
+  </body>
+</html>

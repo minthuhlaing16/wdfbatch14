@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object literals(Javascript Object)</title>
+  </head>
+  <body>
+    <script>
+      let students = {
+        name: "john doe",
+        age: 34,
+        gender: "Male",
+      };
+
+      console.log(students);
+      console.error(students);
+      console.warn(students);
+      console.info(students);
+      console.table(students);
+      console.log(typeof students);
+
+      console.log(students.name);
+      console.log(students.age);
+      console.log(students.gender);
+
+      console.log(typeof students.name);
+      console.log(typeof students.age);
+      console.log(typeof students.gender);
+
+      const person = {
+        name: "John Doe",
+        age: 43,
+        gender: "Male",
+        isStudent: false,
+        favcolors: ["red", "green", "blue"],
+        address: {
+          no: "103",
+          street: "Bo Aung Kyaw st.",
+          city: "Yangon",
+          country: "Myanmar",
+          getcitizenship: true,
+        },
+      };
+
+      console.log(person);
+      console.table(person);
+      // console.warn(person);
+      // console.error(person);
+
+      console.log(person.name);
+      console.log(person.age);
+      console.log(person.gender);
+      console.log(person.isStudent);
+      console.log(person.favcolors[0]);
+      console.log(person.favcolors[1]);
+      console.log(person.favcolors[2]);
+      console.log(person.address.city);
+      console.log(person.address.country);
+      console.log(person.address.getcitizenship);
+      console.log(person.address.no);
+      console.log(person.address.street);
+    </script>
+  </body>
+</html>

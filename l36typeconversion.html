@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type conversion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let val = "hello wrold";
+      console.log(val);
+      console.log(val.length);
+      console.log(typeof val);
+
+      val = 20;
+      console.log(val);
+      console.log(val.length); // .length ka String mar tone loa ya tar ka String ka character array phit nay loa
+      console.log(typeof val);
+
+      val = String(20);
+      console.log(val);
+      console.log(typeof val);
+      console.log(val.length);
+
+      //   Boolean To String
+      val = String(true);
+      console.log(val);
+      console.log(val.length);
+      console.log(typeof val);
+
+      val = new Date();
+      console.log(val);
+      console.log(val.length);
+      console.log(typeof val);
+
+      //   Date to String
+      val = String(new Date());
+      console.log(val);
+      console.log(val.length);
+      console.log(typeof val);
+
+      val = [1, 2, 3, 4, 5];
+      console.log(val);
+      console.log(val.length);
+      console.log(typeof val);
+
+      // Array to String
+      console.log(String(val));
+      console.log(typeof String(val));
+
+      val = "20";
+      console.log(val);
+      console.log(val.length);
+      console.log(typeof val);
+
+      // String to Number ==> Number(),+""
+      val = Number("30");
+      console.log(val);
+      console.log(typeof val);
+
+      let cal = +"30"; // <==
+      console.log(cal);
+      console.log(typeof cal);
+
+      //   var name = +"john";
+      //   console.log(name); // NAN
+      //   console.log(typeof name); // String
+
+      // alert("hello world");
+      // let sayname = prompt("Enter your name");
+      // console.log(`Welcome ${sayname}.`);
+
+      // val = prompt("Enter some number");
+      // console.log(val);
+      // console.log(typeof val); // String
+
+      // val = Number(prompt("Enter Number"));
+      // val = +prompt("Enter First Number");
+      // console.log(val);
+      // console.log(typeof val);
+
+      val = [3, 4, 5];
+      console.log(val);
+      console.log(typeof val);
+
+      val = Number(val); // ==> [3,4,5] ko number datatype change lite tar
+      console.log(val); // NaN
+      console.log(typeof val); // number
+
+      // val = 20 + "123";
+      val = 20 + +"123";
+      console.log(val);
+      console.log(typeof val);
+
+      // toFixed()
+      val = 2.462652436;
+      console.log(val);
+      console.log(val.toFixed(2));
+      console.log(val.toFixed(3));
+
+      // parseInt()
+      val = "3.4532";
+      val = parseInt(val); // ==> kane pyae bae string ka nay number yuu tar
+      console.log(val);
+
+      // parseFloat()
+      val = "2.5325";
+      val = parseFloat(val); // ==> dar kya top dec lae yuu tal string ka nay
+      console.log(val);
+
+      // boolean to number
+      val = false;
+      val = Number(val);
+      console.log(val);
+      console.log(typeof val);
+
+      // String to Array
+      val = "abc";
+      val = Array.from(val);
+      console.log(val); // (3) ['a', 'b', 'c']
+      console.log(typeof val); // object
+
+      // Number to Array ==> number cant convert to Array
+      val = 123;
+      val = Array.from(val);
+      console.log(val); // []
+      console.log(typeof val); // object
+
+      // boolean to Array ==> boolean can't convert to Array
+      val = true;
+      val = Array.from(val);
+      console.log(val); // []
+      console.log(typeof val); // object
+
+      val = {
+        name: "john doe",
+      };
+      val = Array.from(val);
+      console.log(val); // []
+      console.log(typeof val); // object
+    </script>
+  </body>
+</html>
