@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statement</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log("Statement");
+      console.log("_______________________________________________________________________");
+      // Statement
+      // (i) Ternary operator(?)
+      // (ii) if statement
+      // (iii) switch statement
+      // ==> Ternary operator(?)
+      //   c1 statement c2 ? true : false
+      let x = 200;
+      let y = 200;
+      console.log(x > y ? "Yes, it is true." : "No, it is false.");
+      console.log(x < y ? "Yes, it is true." : "No, it is false.");
+      let user = "John Doe";
+      console.log(
+        user === "John Doe"
+          ? "User is John Doe"
+          : user === "Alice"
+          ? "User is Alice"
+          : user === "Bob"
+          ? "User is BoB."
+          : "Wrong Users... Try Again!"
+      );
+      const num1 = "200";
+      const num2 = 200;
+      console.log(
+        "== Double equal result : " +
+          (num1 == num2 ? "True" : "False") +
+          " .. " +
+          "=== Triple equal result: " +
+          (num1 === num2 ? "True" : "False")
+      );
+      console.log(
+        "!= num1 is not equal to num2: " +
+          (num1 != num2 ? "True" : "False") +
+          " .. " +
+          "!== num1 is Strict not equal to num2: " +
+          (num1 !== num2 ? "True" : "False")
+      );
+      console.log(
+        "Num1 is greater than Num2: " +
+          (num1 > num2 ? "True" : "False") +
+          "  " +
+          "Num1 is greater than or equal to Num2: " +
+          (num1 >= num2 ? "True" : "False")
+      );
+      console.log(
+        "Num1 is less than Num2: " +
+          (num1 < num2 ? "True" : "False") +
+          "  " +
+          "Num1 is less than or equal to Num2: " +
+          (num1 <= num2 ? "True" : "False")
+      );
+      // ==> if Statement
+      if (false) {
+        console.log("This Statement is True.");
+      } else {
+        console.log("This Statement is False.");
+      }
+      const idx = 9;
+      if (idx < 10) {
+        console.log("IDX is less than 10");
+      }
+      console.log("I am working...");
+    </script>
+  </body>
+</html>
+
+<!-- Assignment Operators -->
+<!-- = += -= *= /= %= -->
+
+<!-- Comparision Operators -->
+<!-- == === != !== < > <= >= ? -->
+
+<!-- Logical Operator -->
+<!-- && || ! -->
