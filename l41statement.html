@@ -65,11 +65,150 @@
       } else {
         console.log("This Statement is False.");
       }
-      const idx = 9;
+      const idx = "30";
       if (idx < 10) {
         console.log("IDX is less than 10");
       }
       console.log("I am working...");
+      // if else
+      if (idx > 100) {
+        console.log("idx is greater than 100");
+      } else {
+        console.log("idx is lesser than 100");
+      }
+      if (idx == 30) {
+        console.log("idx is equal to 30.");
+      } else {
+        console.log("idx is not equal to 30");
+      }
+      if (idx === 30) {
+        console.log("idx is strict equal to 30.");
+      } else {
+        console.log("idx is not strict equal to 30.");
+      }
+      if (idx != 30) {
+        console.log("idx is not equal to 30.");
+      } else {
+        console.log("idx is equal to 30.");
+      }
+      if (idx !== 30) {
+        console.log("idx is not strict equal to 30.");
+      } else {
+        console.log("idx is strict equal to 30.");
+      }
+      // ==> else if()
+      const j = 1000;
+      const k = 1000;
+      if (j > k) {
+        console.log("j is greater than k");
+      } else if (j === k) {
+        console.log("j is equal to k.");
+      } else {
+        console.log("j is less than k.");
+      }
+      // Nested Condition
+      const passcode = "hii123";
+      console.log(passcode.length); // 7
+      if (passcode.length >= 7) {
+        console.log("Good Password.");
+        if (passcode.indexOf(" ") === -1) {
+          console.log("Valid passcode");
+        } else {
+          console.log("Invalid passcode.Passcode should not contain white space...");
+        }
+      } else {
+        console.log("Weak passcode");
+      }
+      // Switch statement
+      let grade = "E";
+      switch (grade) {
+        case "A":
+          console.log("So Perfect welldone..");
+          break;
+        case "B":
+          console.log("Well Done...");
+          break;
+        case "C":
+          console.log("Good You are average you need to try hard...");
+          break;
+        case "D":
+          console.log("Fail...");
+          break;
+        default:
+          console.log("wrong Grade...");
+      }
+      // game
+      user = "red";
+      // if (user === "red") {
+      //   console.log("I hate red color...");
+      // } else if (user === "blue") {
+      //   console.log("I don't like blue.. Nice try..");
+      // } else if (user === "green") {
+      //   console.log("Yes, Of course i like green color...");
+      // } else if (user === "orange") {
+      //   console.log("No No No");
+      // } else {
+      //   console.log("Try Again and Again");
+      // }
+      switch (user) {
+        case "red":
+          console.log("I love red color");
+          break;
+        case "green":
+          console.log("I hate green color");
+          break;
+        case "blue":
+          console.log("I don't like blue color");
+          break;
+        case "yellow":
+          console.log("Nice Try");
+          break;
+        case "purple":
+          console.log("try Again");
+          break;
+        default:
+          console.log("Wrong Answer!!");
+      }
+      let getDay = new Date().getDay();
+      let today;
+      switch (getDay) {
+        case 0:
+          today = "Sunday";
+          break;
+        case 1:
+          today = "Monday";
+          break;
+        case 2:
+          today = "Tuesday";
+          break;
+        case 3:
+          today = "Wednesday";
+          break;
+        case 4:
+          today = "Thursday";
+          break;
+        case 5:
+          today = "Friday";
+          break;
+        default:
+          today = "Saturday";
+      }
+      console.log(today);
+      // Assignment Operator
+      let a = 10;
+      let b;
+      console.log((b = a));
+      console.log(a);
+      a += 2;
+      console.log(a);
+      a -= 2;
+      console.log(a);
+      a *= 4;
+      console.log(a);
+      a /= 2;
+      console.log(a);
+      a %= 2;
+      console.log(a);
     </script>
   </body>
 </html>
