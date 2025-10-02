@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>looping</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const name = "aung aung";
+      //   console.log(name);
+      const arrs = ["red", "green", "blue", "white"];
+      //   console.log(arrs);
+      //   console.log(arrs[0]);
+      //   console.log(arrs[1]);
+      //   console.log(arrs[2]);
+      //   console.log(arrs[3]);
+      // 1. For loop
+      // looping mar const tone loa ma ya buu
+      // 2. while loop
+      // 3. do while loop
+      for (var i = 0; i < 10; i++) {
+        console.log(i);
+      }
+      console.log(`Outside value of i is: `, i);
+      let j = 10;
+      for (j; j < 30; j++) {
+        console.log(j);
+      }
+      console.log("outside value of j is: ", j);
+      for (var k = 0; k <= 10; k++) {
+        if (k === 5) {
+          //   console.log(k + " is my fav number.");
+          //   console.log(`${k} is my fav number.`);
+          console.log(k, "is my fav number.");
+          continue;
+        }
+        console.log("value of k is: ", k);
+      }
+      console.log("outside value of k is ", k);
+      for (var p = 0; p < 10; p++) {
+        console.log(p);
+        if (p === 5) {
+          console.log(p + " is my fav number.");
+          break;
+        }
+      }
+      console.log("outside value of p is: ", p);
+      for (var q = 0; q < 10; q++) {
+        if (q === 2) {
+          console.log(q + " is my fav number...");
+          continue;
+        }
+        console.log(q);
+      }
+      console.log("outside value of q is: ", q);
+      for (var r = 10; r > 0; r--) {
+        console.log(r);
+      }
+      console.log("outside value of s is: ", r);
+      // exercise
+      let colors = ["red", "green", "blue", "yellow", "orange"];
+      for (var w = 0; w < colors.length; w++) {
+        // console.log(w);
+        console.log(colors[w]);
+      }
+      const peoples = [
+        {
+          name: "aung aung",
+          age: 23,
+          gender: "Male",
+        },
+        {
+          name: "maung maung",
+          age: 8,
+          gender: "Male",
+        },
+        {
+          name: "su su",
+          age: 14,
+          gender: "Female",
+        },
+      ];
+      //   console.log(peoples);
+      //   console.log(peoples[1].name);
+      for (var s = 0; s < peoples.length; s++) {
+        console.log(`My name is ${peoples[s].name}. I am ${peoples[s].age} years old. Gender: ${peoples[s].gender}.`);
+      }
+      // 2. for in loop (obj/array)
+      //   for(key/index in obj/array){
+      //     code to be executed
+      //   }
+      let students = {
+        name: "aung kyaw",
+        age: 34,
+        gender: "Male",
+        isStudent: true,
+        city: "Mandalay",
+      };
+      console.log(students);
+      //   console.log(students.name); // dot notation
+      //   console.log(students["age"]); // bracket notation
+      for (const key in students) {
+        // console.log(key);
+        // console.log(students.key); // undefined
+        console.log(students[key]); // key variable phit nay loa
+      }
+      const ourteams = ["kyaw kyaw", "maung maung", "aung aung", "zaw zaw", "su su"];
+      for (let idx in ourteams) {
+        // console.log(idx); // note: string
+        console.log(ourteams[idx]);
+      }
+      const greeting = "hello";
+      //   console.log(greeting[0]);
+      for (let idx in greeting) {
+        // console.log(idx);
+        console.log(greeting[idx]);
+      }
+      // for of loop (array)
+      //   for(value of array){
+      //     code to be executed
+      //   }
+      const girls = ["susu", "lulu", "nunu", "pupu", "yuyu"];
+      for (let girl of girls) {
+        console.log(girl);
+      }
+      const thanks = "hifi";
+      for (let thank of thanks) {
+        console.log(thank);
+      }
+      // 4. while loop
+      let x = 0;
+      while (x <= 100) {
+        console.log(x);
+        x++;
+      }
+      console.log("outside value of x is: ", x);
+      let c = 0;
+      while (c < 10) {
+        c++;
+        console.log(c);
+      }
+      console.log("outside value of c is : ", c);
+      const paints = ["red", "green", "blue", "black", "white"];
+      let f = 0;
+      while (f < paints.length) {
+        console.log(`My paint color is : ${paints[f]}`);
+        f++;
+      }
+    </script>
+  </body>
+</html>
