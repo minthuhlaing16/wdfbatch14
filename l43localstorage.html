@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localstorage</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Local Storage
+      // Create
+      localStorage.setItem("name", "Maung Maung");
+      localStorage.setItem("age", 13);
+      localStorage.setItem("city", "Yangon");
+      // Update (Edit)
+      // Method 1
+      localStorage.setItem("name", "Bob");
+      // Method 2
+      localStorage.city = "Mandalay";
+      // Read
+      // Method 1
+      const getname = localStorage.name;
+      const getage = localStorage.age;
+      const getcity = localStorage.city;
+      console.log(`My name is ${getname}. I am ${getage}.I live in ${getcity}.`);
+      // Method 2
+      const namee = localStorage.getItem("name");
+      const agee = localStorage.getItem("age");
+      const cityy = localStorage.getItem("city");
+      console.log(`My name is ${namee}. I am ${agee}.I live in ${cityy}.`);
+      // Delete
+      //   Method 1 (Single Delete)
+      //   console.log(`Before delete: ${localStorage.getItem("name")}`);
+      //   console.log(`Before delete: ${localStorage.getItem("age")}`);
+      //   console.log(`Before delete: ${localStorage.getItem("city")}`);
+      //   localStorage.removeItem("name");
+      //   console.log(`After delete: ${localStorage.getItem("name")}`);
+      //   localStorage.removeItem("age");
+      //   console.log(`After delete: ${localStorage.getItem("age")}`);
+      //   localStorage.removeItem("city");
+      //   console.log(`After delete: ${localStorage.getItem("city")}`);
+      //   localStorage.removeItem("todos");
+      //   Method 2 (All Delete)
+      localStorage.clear();
+    </script>
+  </body>
+</html>
+
+<!-- 
+Database 
+(i) Temp storage (browser)
+(i) Per storage (mysql,mongodb,firebase)
+-->
+
+<!-- 
+Cookies 4kb, alltabs , when user delete/timer, browser/server
+localstorage 5-10-20Mb(browser depend), alltabs, when user delete, browser
+sessionstorage 5Mb, private to tag, on tab close , browser
+-->

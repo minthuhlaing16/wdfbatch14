@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section storage</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // SectionStorage
+      // Create
+      sessionStorage.setItem("name", "aung kyaw");
+      sessionStorage.setItem("age", 22);
+      sessionStorage.setItem("city", "New York");
+      // Update(edit)
+      // Method 1
+      sessionStorage.setItem("name", "moe moe");
+      // Method 2
+      sessionStorage.city = "Dubai";
+      // Read
+      let name, age, city;
+      // Method 1
+      //   name = sessionStorage.getItem("name");
+      //   age = sessionStorage.getItem("age");
+      //   city = sessionStorage.getItem("city");
+      //   console.log(`My name is ${name}. I am ${age} years old and I live in ${city}.`);
+      // Method 2
+      name = sessionStorage.name;
+      age = sessionStorage.age;
+      city = sessionStorage.city;
+      console.log(`My name is ${name}. I am ${age} years old and I live in ${city}.`);
+      // Delete
+      //   Method 1 (single delete)
+      //   console.log(`Before Delete : ${sessionStorage.name}`);
+      //   console.log(`Before Delete : ${sessionStorage.age}`);
+      //   console.log(`Before Delete : ${sessionStorage.city}`);
+      //   sessionStorage.removeItem("name");
+      //   sessionStorage.removeItem("age");
+      //   sessionStorage.removeItem("city");
+      //   console.log(`After Delete : ${sessionStorage.name}`);
+      //   console.log(`After Delete : ${sessionStorage.age}`);
+      //   console.log(`After Delete : ${sessionStorage.city}`);
+      //   Method 2 (all delete)
+      console.log(`Before Delete : ${sessionStorage.name}`);
+      console.log(`Before Delete : ${sessionStorage.age}`);
+      console.log(`Before Delete : ${sessionStorage.city}`);
+      sessionStorage.clear();
+      console.log(`After Delete : ${sessionStorage.name}`);
+      console.log(`After Delete : ${sessionStorage.age}`);
+      console.log(`After Delete : ${sessionStorage.city}`);
+    </script>
+  </body>
+</html>

@@ -147,6 +147,62 @@
         console.log(`My paint color is : ${paints[f]}`);
         f++;
       }
+      const laptop = [{ cpu: "core i9", ram: "16gb", hdd: "1Tb" }];
+      console.log(laptop);
+      console.log(laptop[0].cpu);
+      console.log(laptop[0].ram);
+      console.log(laptop[0].hdd);
+      let idxnum = 0;
+      while (idxnum < laptop.length) {
+        // console.log(laptop[idxnum]);
+        console.log(`Cpu is ${laptop[idxnum].cpu}, Ram is ${laptop[idxnum].ram},Hdd is ${laptop[idxnum].hdd}.`);
+        idxnum++;
+      }
+      // 5. Do while loop
+      let hello = 0;
+      do {
+        console.log("hello world in 100 times ", hello);
+        hello++;
+      } while (hello <= 100);
+      let g = 0;
+      do {
+        g++;
+        console.log("Value of g is : " + g);
+      } while (g < 20);
+      console.log("outside value of g is:", g);
+      const colours = ["red", "green", "blue", "white", "black"];
+      // console.log(colors.length);
+      let h = 0;
+      do {
+        console.log(`Colors: ${colours[h]}`);
+        h++;
+      } while (h < colours.length);
+      // 6. forEach() loop
+      let candycolors = ["red", "green", "blue", "orange", "black", "white"];
+      candycolors.forEach((candycolor, idx, arr) => {
+        // console.log(candycolor);
+        // console.log(idx);
+        // console.log(arr);
+        console.log(`Index number is : ${idx}. Value is ${candycolor}..`);
+      });
+      let visitors = ["aung aung", "maung maung", "kaung kaung", "susu", "zayyar", "hlawin"];
+      // let peoplearrs = visitors.forEach((visitor, idx, arr) => {
+      //   return visitor;
+      // });
+      // console.log(peoplearrs); // undefined
+      // 7. map loop
+      let peoplearrs = visitors.map((visitor) => {
+        return `My name is ${visitor}`;
+      });
+      console.log(peoplearrs); //(6) ['My name is aung aung', 'My name is maung maung', 'My name is kaung kaung', 'My name is susu', 'My name is zayyar', 'My name is hlawin'];
+      console.log(visitors); // original array ko ma hti buu (6) ['aung aung', 'maung maung', 'kaung kaung', 'susu', 'zayyar', 'hlawin']
+      // 8. filter loop
+      const ages = [23, 34, 56, 80, 13, 12, 18, 17, 10, 19, 60, 25, 21, 30, 14];
+      console.log(ages);
+      let adult = ages.filter((age) => age >= 18);
+      console.log("Adult ages are : " + adult);
+      let children = ages.filter((age) => age < 18);
+      console.log(`Children ages are: ${children}.`);
     </script>
   </body>
 </html>
