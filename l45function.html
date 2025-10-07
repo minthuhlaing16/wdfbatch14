@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular function</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+        (A) Default Function | System Function
+        (B) User Define Function
+        (1) Regular Function
+        (i) Manual  Function
+        (ii) Parameter Function
+        (a) Single Parameter Function
+        (b) Multi Parameter Function
+        (2) Arrow Function
+        (i) Manual Function
+        (ii) Parameter Function
+        (a) Single Parameter Function
+        (b) Multi Parameter Function
+        (3) Generator Function
+        (syntax)
+        function name(){
+            code to be executed (i) print or (ii) return
+        }
+        name(); function invoke / function recall
+        */
+      // (i) Manual Function
+      function greet() {
+        console.log("hello Myanmar");
+        console.log("hello Thailand");
+        console.log("hello Singapore");
+      }
+      greet();
+      greet();
+      greet();
+      hello(); // hello bago
+      function hello() {
+        console.log("Hello Yangon");
+      }
+      hello(); // hello bago
+      function hello() {
+        console.log("hello bago");
+      }
+      hello(); // hello bago
+      function funone() {
+        funtwo();
+        console.log("I am function one");
+      }
+      function funtwo() {
+        console.log("I am function two");
+      }
+      function funthree() {
+        funone();
+      }
+      funthree();
+      // ______________________________________________________________________________________________
+      // RETURN
+      function funfour() {
+        console.log(4);
+      }
+      function funfive() {
+        console.log(5);
+      }
+      funfour();
+      funfive();
+      function funsix() {
+        const num4 = funfour();
+        const num5 = funfive();
+        console.log(num4, num5); // undefined undefined
+        const total = num4 + num5;
+        console.log(total); // NaN
+      }
+      funsix();
+      function funseven() {
+        return 7;
+      }
+      function funeight() {
+        return 8;
+      }
+      function total() {
+        let num7 = funseven();
+        let num8 = funeight();
+        let total = num7 + num8;
+        console.log(`Value of num7: ${num7}`);
+        console.log(`Value of num8: ${num8}`);
+        console.log(`Total of num7 and num8: ${total}`);
+      }
+      total();
+      function funnine() {
+        console.log("Before return");
+        return 9;
+        console.log("After Return!!!"); // return out ka code tway ka alote ma lote top buu
+      }
+      console.log(funnine());
+      function funten() {
+        let p = 30;
+        let q = 20;
+        if (p > q) {
+          return "p is greater than q";
+        } else {
+          return "p is less than q";
+        }
+      }
+      console.log(funten());
+      function funele() {
+        const msg1 = "Hello";
+        const msg2 = "How are you?";
+        const msg3 = "What is your name ?";
+        console.log(msg1, msg2, msg3);
+        return "block";
+      }
+      funele();
+      console.log(funele());
+    </script>
+  </body>
+</html>
