@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Exercise</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 300px;
+        background-color: #f4f4f4;
+        padding: 10px;
+        box-shadow: 10px 10px 20px gray;
+      }
+      .form-group label {
+        display: block;
+        margin: 10px 0;
+      }
+      .form-group .form-control {
+        width: 100%;
+        padding: 5px;
+      }
+      .btn {
+        width: 100%;
+        background-color: blueviolet;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 5px 0;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      .btn:hover {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Show Name = <span id="replacename"></span></h3>
+      <form action="" method="">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            class="form-control"
+            placeholder="Enter Your First Name"
+            autocomplete="off"
+            autofocus
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+            placeholder="Enter Your Last Name"
+            autocomplete="off"
+          />
+        </div>
+        <button type="button" class="btn" onclick="getdata()">Get Name</button>
+      </form>
+    </div>
+    <script>
+      /*
+      const getreplacename = document.getElementById("replacename");
+      const getfirstinput = document.getElementById("firstname");
+      const getlastinput = document.getElementById("lastname");
+      const getbtn = document.querySelector(".btn");
+      getbtn.onclick = function () {
+        let firstname = getfirstinput.value;
+        let lastname = getlastinput.value;
+        getreplacename.textContent = `${firstname} ${lastname}`;
+        getfirstinput.value = "";
+        getlastinput.value = "";
+        getfirstinput.focus();
+      };
+      */
+      function getdata() {
+        // console.log("hello");
+        const getfirstname = document.getElementById("firstname").value;
+        const getlastname = document.getElementById("lastname").value;
+        const getreplacename = document.getElementById("replacename");
+        // getreplacename.innerHTML = `${getfirstname} ${getlastname}`;
+        // getreplacename.textContent = `${getfirstname} ${getlastname}`;
+        getreplacename.innerText = `${getfirstname} ${getlastname}`;
+        document.getElementById("firstname").value = "";
+        document.getElementById("lastname").value = "";
+        document.getElementById("firstname").focus();
+      }
+    </script>
+  </body>
+</html>

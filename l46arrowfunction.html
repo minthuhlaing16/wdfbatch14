@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      const regfun1 = function () {
+        const num1 = 100;
+        return num1;
+      };
+      console.log("this is regfun1() : ", regfun1());
+      // Arrow Function
+      const arrfun1 = () => {
+        let name = "John Doe";
+        return name;
+      };
+      console.log(arrfun1());
+      const arrfun2 = (name) => {
+        return "My name is " + name;
+      };
+      console.log(arrfun2("hla hla"));
+      const arrfun3 = (age) => `I am ${age} years old`;
+      console.log(arrfun3(23));
+      const arrfun4 = (name, age) => `I am ${name}, i am ${age} years old..`;
+      console.log(arrfun4("aung kyaw", 12));
+      const multiful1 = (num1, num2) => num1 + num2;
+      console.log(multiful1(12, 20));
+      const deffun1 = (name = "john", age = 50) => `My name is ${name}. I am ${age} years old.`;
+      console.log(deffun1());
+    </script>
+  </body>
+</html>

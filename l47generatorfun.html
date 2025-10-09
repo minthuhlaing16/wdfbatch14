@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generator function</title>
+  </head>
+  <body>
+    <script>
+      function test1() {
+        return 10;
+      }
+      console.log("this is test1(): ", test1());
+      console.log("this is test1(): ", test1());
+      console.log("this is test1(): ", test1());
+      function test2() {
+        let x = 1;
+        x++;
+        return x;
+      }
+      console.log("this is test2(): ", test2());
+      console.log("this is test2(): ", test2());
+      console.log("this is test2(): ", test2());
+      let y = 1;
+      function test3() {
+        y++;
+        return y;
+      }
+      console.log("this is test3(): ", test3());
+      console.log("this is test3(): ", test3());
+      console.log("this is test3(): ", test3());
+      // Generator Function
+      // yield
+      // next()
+      function* generator() {
+        yield 1;
+      }
+      console.log(generator());
+      console.log(generator().next());
+      console.log(generator().next().value);
+      console.log(generator().next().done);
+      function* generator1() {
+        yield 1;
+        yield 2;
+        yield 3;
+      }
+      const genfun1 = generator1();
+      console.log(genfun1);
+      //   console.log(genfun1.next());
+      //   console.log(genfun1.next());
+      //   console.log(genfun1.next());
+      //   console.log(genfun1.next());
+      console.log(genfun1.next().value);
+      console.log(genfun1.next().value);
+      console.log(genfun1.next().value);
+      console.log(genfun1.next().value);
+    </script>
+  </body>
+</html>

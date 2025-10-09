@@ -114,6 +114,49 @@
       }
       funele();
       console.log(funele());
+      // Parameter Function
+      // (i) Single parameter function
+      function hello(city) {
+        console.log(`hello ${city}`);
+      }
+      hello(); // hello undefined ==> ta char language tway mar so error tat tal
+      hello("Yangon");
+      hello("Mandalay");
+      hello(500); // hello 500 ==> String datatype
+      // Default Parameter
+      function myfun2(country = "Myanmar") {
+        console.log(`hello I live in ${country}.`);
+      }
+      myfun2();
+      myfun2("Singapore");
+      myfun2("Malaysia");
+      // (ii) multi parameter function
+      function info(name, age, gender) {
+        console.log(`Hello ${name},You are ${age} years old...Gender: ${gender}.`);
+      }
+      info("John Doe", 22, "Male");
+      function info2(name = "John Doe", age = "21", gender = "Male") {
+        console.log(`My name is ${name}. I am ${age} years old.Gender: ${gender}.`);
+      }
+      info2();
+      info2((name = "hla hla"), 44, "Female");
+      function multifun(x, y, ...z) {
+        console.log(`value of x = ${x}. value of y = ${y}.value of z = ${z}`);
+      }
+      multifun(1, 2, 3, 4, 5);
+      function multifun2(x = 1, y = 2, z = 3) {
+        const result = x + y + z;
+        return result;
+      }
+      console.log(multifun2());
+      console.log(multifun2(10));
+      console.log(multifun2(10, 20));
+      // Nameless Function
+      let infofun = function (name, color) {
+        console.log(`My name is ${name}. I love ${color} color.`);
+      };
+      infofun("John Doe", "orange");
+      infofun("Alice", "purple");
     </script>
   </body>
 </html>
