@@ -23,6 +23,26 @@
       let message = getgreet();
       console.log(message);
       console.log(greet()());
+      function welcomefun(name) {
+        return function () {
+          return `Welcome ${name}`;
+        };
+      }
+      console.log(welcomefun("John Doe")());
+      let welcomeaungaung = welcomefun("aung aung");
+      console.log(welcomeaungaung());
+      function addfun(x) {
+        return function (y) {
+          return x + y;
+        };
+      }
+      console.log(addfun(2)(1));
+      let adding = addfun(1);
+      console.log(adding(5));
+      const multifun = (num1) => (num2) => num1 * num2;
+      console.log(multifun(2)(2));
+      const multiplyby3 = multifun(3);
+      console.log(multiplyby3(5));
     </script>
   </body>
 </html>

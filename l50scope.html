@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scope</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Global scope
+      // block scope
+      // function scope
+      const name = "aung aung";
+      //   name = "Kyaw Kyaw"; // error
+      //   const name = "aung zaw"; // error
+      console.log(name);
+      let city = "Yangon";
+      city = "Mandalay";
+      //   let city = "Bago"; // error
+      console.log(city);
+      var country = "Singapore";
+      country = "Malaysia";
+      var country = "India";
+      console.log(country);
+      // _____________________________________________________________________________________
+      var globalvar = "I am global var";
+      let globallet = "I am global let";
+      const globalconst = "I am global const";
+      function accessglobalscope() {
+        console.log(globalvar);
+        console.log(globallet);
+        console.log(globalconst);
+      }
+      accessglobalscope();
+      console.log(globalvar);
+      console.log(globallet);
+      console.log(globalconst);
+      // ____________________________________________________________
+      function accesslocalscope() {
+        var localvar = "I am local var";
+        let locallet = "I am local let";
+        const localconst = "I am local const";
+        console.log(localvar);
+        console.log(locallet);
+        console.log(localconst);
+      }
+      accesslocalscope();
+      //   console.log(localvar); // error
+      //   console.log(locallet); // error
+      //   console.log(localconst); // error
+      // block scope
+      function accessblockscope() {
+        if (true) {
+          var blockvar = "I am block var";
+          let blocklet = "I am block let";
+          const blockconst = "I am block const";
+          console.log(blockvar);
+          console.log(blocklet);
+          console.log(blockconst);
+        }
+        console.log(blockvar); // accessable
+        // console.log(blocklet); // error
+        // console.log(blockconst); // error
+      }
+      accessblockscope();
+      // scope in for loop
+      //   for (const x = 0; x < 10; x++) {
+      //     console.log(x); // error
+      //   }
+      for (let a = 0; a < 10; a++) {
+        console.log(a);
+      }
+      //   console.log("outside value of a is: ", a); // error
+      for (var b = 0; b < 10; b++) {
+        console.log(b);
+      }
+      console.log("outside value of b is: ", b);
+      // outside declare
+      const num1 = 0;
+      let num2 = 0;
+      var num3 = 0;
+      //   for (num1; num1 < 10; num1++) {
+      //     console.log(num1); // error
+      //   }
+      for (num2; num2 < 10; num2++) {
+        console.log(num2);
+      }
+      console.log("outside value of num2 is: ", num2);
+      for (num3; num3 < 10; num3++) {
+        console.log(num3);
+      }
+      console.log("outside value of num3 is: ", num3);
+      // new declare
+      const num4 = 1;
+      let num5 = 2;
+      var num6 = 3;
+      //   for (const num4 = 0; num4 < 10; num4++) {
+      //     console.log(num4); // 0 to error
+      //   }
+      console.log("outside value of num4 is: ", num4);
+      for (let num5 = 0; num5 < 10; num5++) {
+        console.log(num5);
+      }
+      console.log("outside value of num5 is: ", num5);
+      for (var num6 = 0; num6 < 10; num6++) {
+        console.log(num6);
+      }
+      console.log("outside value of num6 is: ", num6);
+      // __________________________________________________________________________________________________
+      // scope in function
+      const number1 = 10;
+      let number2 = 20;
+      var number3 = 30;
+      function funone() {
+        console.log(number1 + number2 + number3);
+      }
+      funone();
+      function funtwo() {
+        const x = 100;
+        const y = 200;
+        const z = 300;
+        console.log(x + y + z);
+      }
+      funtwo();
+      console.log("Global number1: ", number1);
+      console.log("Global number2: ", number2);
+      console.log("Global number3: ", number3);
+      //   console.log("local x ", x); // x is not defined
+      //   console.log("local y ", y); // y is not defined
+      //   console.log("local z ", z); // z is not defined
+      // ==> override
+      const p = 1;
+      let q = 2;
+      var r = 3;
+      function funthree() {
+        // p = 10;
+        q = 20;
+        r = 30;
+        console.log("value of p inside funthree: ", p);
+        console.log("value of q inside funthree: ", q);
+        console.log("value of r inside funthree: ", r);
+      }
+      console.log("value of p outside funthree: ", p);
+      console.log("value of q outside funthree: ", q);
+      console.log("value of r outside funthree: ", r);
+      funthree();
+      console.log("value of p outside funthree: ", p);
+      console.log("value of q outside funthree: ", q);
+      console.log("value of r outside funthree: ", r);
+      // New Declare
+      const aa = 10;
+      let bb = 20;
+      var cc = 30;
+      function funfour() {
+        const aa = 100;
+        let bb = 200;
+        var cc = 300;
+        console.log("value of aa inside funfour: ", aa);
+        console.log("value of bb inside funfour: ", bb);
+        console.log("value of cc inside funfour: ", cc);
+      }
+      console.log("value of aa outside funfour: ", aa);
+      console.log("value of bb outside funfour: ", bb);
+      console.log("value of cc outside funfour: ", cc);
+      funfour();
+      console.log("value of aa outside funfour: ", aa);
+      console.log("value of bb outside funfour: ", bb);
+      console.log("value of cc outside funfour: ", cc);
+    </script>
+  </body>
+</html>

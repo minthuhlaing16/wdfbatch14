@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom clock</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap");
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #bbb;
+      }
+      h3 {
+        font-family: "Playwrite DE SAS";
+        width: 1200px;
+        text-align: center;
+        font-size: 5em;
+        letter-spacing: 5px;
+        color: slateblue;
+        border: 5px solid gold;
+        padding: 15px;
+        background: linear-gradient(45deg, black, gray);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="display">00 : 00: 00 AM Sunday</h3>
+    <script>
+      const getdisplay = document.getElementById("display");
+      //   console.log(getdisplay);
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      //   console.log(days);
+      //   console.log(days[2]);
+      function startclock() {
+        const getDate = new Date();
+        let getHour = getDate.getHours();
+        const getMins = getDate.getMinutes();
+        const getSecs = getDate.getSeconds();
+        const getDay = getDate.getDay();
+        switch (getHour > 12) {
+          case true:
+            getamandpm = "PM";
+            getHour -= 12;
+            break;
+          default:
+            getamandpm = "AM";
+        }
+        let setclock = `${getHour} : ${getMins} : ${getSecs} ${getamandpm} ${days[getDay]}`;
+        getdisplay.textContent = setclock;
+      }
+      startclock();
+      setInterval(startclock, 1000);
+    </script>
+  </body>
+</html>
