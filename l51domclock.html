@@ -42,7 +42,7 @@
         const getMins = getDate.getMinutes();
         const getSecs = getDate.getSeconds();
         const getDay = getDate.getDay();
-        switch (getHour > 12) {
+        switch (getHour >= 12) {
           case true:
             getamandpm = "PM";
             getHour -= 12;

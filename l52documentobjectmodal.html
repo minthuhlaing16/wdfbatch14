@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Modal</title>
+    <link rel="stylesheet" href="css/documentobjectmodal.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Todo List</h3>
+          <form action="" method="" id="form" class="form">
+            <div class="form-group">
+              <label for="task">Enter New Tasks</label>
+              <input type="text" name="task" id="task" class="form-control" />
+            </div>
+            <input type="submit" class="btn" value="Add Task" />
+          </form>
+        </div>
+        <div class="card-footer">
+          <h4 id="tasktitle">All my Tasks.</h4>
+          <ul class="list-group">
+            <li class="list-group-item">List Item 1 <a href="#" id="delete-item1" class="delete-item">Delete</a></li>
+            <li class="list-group-item">List Item 1 <a href="#" id="delete-item2" class="delete-item">Delete</a></li>
+            <li class="list-group-item">List Item 1 <a href="#" id="delete-item3" class="delete-item">Delete</a></li>
+            <li class="list-group-item">List Item 1 <a href="#" id="delete-item4" class="delete-item">Delete</a></li>
+            <li class="list-group-item">List Item 1 <a href="#" id="delete-item5" class="delete-item">Delete</a></li>
+          </ul>
+          <a href="#" id="clearall" class="clear-tasks">Clear Tasks</a>
+        </div>
+        <div class="moretasks">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Fd6cd5151c04765d1992edfde14483068%2Ftenor.gif%3Fitemid%3D5662595&f=1&nofb=1&ipt=1ec22cdde141cff9f5d8d8e6aa41eaa55a1c3e42ce29316636c463f08206de7c"
+            alt="loader"
+            id="loading"
+            class="loading"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="js/documentobjectmodal.js"></script>
+  </body>
+</html>
