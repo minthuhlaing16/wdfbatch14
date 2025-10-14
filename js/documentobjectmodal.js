@@ -53,7 +53,44 @@ document.getElementById("tasktitle").style.backgroundColor = "lightgreen";
 document.getElementById("tasktitle").style.color = "#fff";
 document.getElementById("tasktitle").style.padding = "5px";
 // Change Content
-document.getElementById("tasktitle").textContent = "My Job";
-document.getElementById("tasktitle").innerText = "My Task";
-document.getElementById("tasktitle").innerHTML =
-  "<span style='color:steelblue;font-size:25px;text-decoration:underline;'>My Todo</span>";
+// document.getElementById("tasktitle").textContent = "My Job";
+// document.getElementById("tasktitle").innerText = "My Task";
+// document.getElementById("tasktitle").innerHTML =
+//   "<span style='color:steelblue;font-size:25px;text-decoration:underline;'>My Todo</span>";
+// ==> Call By CLass Name (Class)
+// let list = document.getElementsByClassName("list-group-item");
+// console.log(list); // HTMLCollection(5)
+// console.log(list[2]);
+// list[2].style.color = "blue";
+// list[2].textContent = "Have to visit";
+// list[2].innerText = "Have to cook";
+// list[2].innerHTML = "Have to read <a href='#' id='delete-item3' class='delete-item'><i class='fa-solid fa-trash'></i>";
+// ==> Call By Tag Name(Element)
+// const litags = document.getElementsByTagName("li");
+// console.log(litags); // HTMLCollection
+// console.log(litags[1]);
+// litags[1].style.color = "purple";
+// litags[1].innerHTML = `Hava to fight <a href="#" id="delete-item3" class="delete-item"><i class="fa-solid fa-trash"></i>`;
+// ==> Call By QuerySelector
+// console.log(document.querySelector("#tasktitle")); // h4#tasktitle
+// console.log(document.querySelector(".card-title")); // h3.card-title
+// console.log(document.querySelector("h3")); // h3.card-title
+// console.log(document.querySelector("li")); // only first li
+// console.log(document.querySelector(".list-group-item")); // only first li
+// document.querySelector("li").style.color = "navy";
+// document.querySelector("li").style.fontFamily = "monospace";
+// document.querySelector("ul li").style.color = "violet";
+// document.querySelector("ul li:nth-child(odd)").style.color = "red";
+// document.querySelector("ul li:nth-child(even)").style.color = "blue";
+// document.querySelector("ul li:last-child").style.color = "green";
+// document.querySelector("ul li:last-of-type").style.color = "yellow";
+// document.querySelector("ul li:nth-of-type(4)").style.color = "crimson";
+// ==> Query Selector All
+console.log(document.querySelectorAll("#tasktitle")); // NodeList [h4#tasktitle]
+console.log(document.querySelectorAll("#tasktitle")[0]); // h4#tasktitle
+console.log(document.querySelectorAll(".card-title")); // NodeList [h3.card-title]
+console.log(document.querySelectorAll(".card-title")[0]); // NodeList [h3.card-title]
+console.log(document.querySelectorAll("li")); // Nodelist
+console.log(document.querySelectorAll("li")[2]);
+console.log(document.querySelectorAll(".list-group-item")); // Nodelist
+console.log(document.querySelectorAll("ul .list-group-item")[3]);
