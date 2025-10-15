@@ -120,19 +120,50 @@ const liitems = document.querySelectorAll("ul.list-group li.list-group-item");
 //   liitem.style.color = "red";
 //   liitem.style.fontSize = 20 + "px";
 // });
-const listodd = document.querySelectorAll("li:nth-child(odd)");
-console.log(listodd);
-listodd.forEach((listodd) => {
-  console.log(listodd);
-  listodd.style.backgroundColor = "gray";
-});
-const listeven = document.querySelectorAll("li:nth-child(even)");
+// const listodd = document.querySelectorAll("li:nth-child(odd)");
+// console.log(listodd);
+// listodd.forEach((listodd) => {
+//   console.log(listodd);
+//   listodd.style.backgroundColor = "gray";
+// });
+// const listeven = document.querySelectorAll("li:nth-child(even)");
 // console.log(listeven);
 // listeven.forEach((listeven) => {
 //   console.log(listeven);
 //   listeven.style.backgroundColor = "orange";
 // });
-for (let i = 0; i < listeven.length; i++) {
-  console.log(listeven[i]);
-  listeven[i].style.backgroundColor = "silver";
-}
+// for (let i = 0; i < listeven.length; i++) {
+//   console.log(listeven[i]);
+//   listeven[i].style.backgroundColor = "silver";
+// }
+// ==> Parent to Children
+// let getli = document.querySelector("ul li");
+// let getli = document.querySelector("li.list-group-item");
+let getli = document.querySelector("li.list-group-item:first-child");
+// console.log(getli);
+let childrens;
+let getul = document.querySelector("ul.list-group");
+childrens = getul.children;
+console.log(childrens); // HTMLCollection
+console.log(childrens[1]);
+console.log(getul.children[1]);
+// childrens[1].textContent = "Have to Cook";
+// childrens[1].innerHTML = "Have to Read";
+getul.children[1].innerHTML = `Have to Sleep <a href="#" id="delete-item2" class="delete-item"><i class="fa-solid fa-trash"></i></a>`;
+// Parent to children to children
+let chl = getul;
+chl = getul.children;
+chl = getul.children[1];
+chl = getul.children[1].children;
+chl = getul.children[1].children[0];
+chl = getul.children[1].children[0].id;
+chl = getul.children[1].children[0].classList.value;
+chl = getul.children[1].children[0].className;
+chl = getul.children[1].children[0].href;
+chl = getul.children[1].children[0].children;
+chl = getul.children[1].children[0].children[0];
+chl = getul.children[1].children[0].children[0].classList;
+chl = getul.children[1].children[0].children[0].classList.value;
+chl = getul.children[1].children[0].children[0].classList[0];
+chl = getul.children[1].children[0].children[0].classList[1];
+console.log(chl);
