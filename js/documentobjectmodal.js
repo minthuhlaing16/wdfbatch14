@@ -86,11 +86,53 @@ document.getElementById("tasktitle").style.padding = "5px";
 // document.querySelector("ul li:last-of-type").style.color = "yellow";
 // document.querySelector("ul li:nth-of-type(4)").style.color = "crimson";
 // ==> Query Selector All
-console.log(document.querySelectorAll("#tasktitle")); // NodeList [h4#tasktitle]
-console.log(document.querySelectorAll("#tasktitle")[0]); // h4#tasktitle
-console.log(document.querySelectorAll(".card-title")); // NodeList [h3.card-title]
-console.log(document.querySelectorAll(".card-title")[0]); // NodeList [h3.card-title]
-console.log(document.querySelectorAll("li")); // Nodelist
-console.log(document.querySelectorAll("li")[2]);
-console.log(document.querySelectorAll(".list-group-item")); // Nodelist
-console.log(document.querySelectorAll("ul .list-group-item")[3]);
+// console.log(document.querySelectorAll("#tasktitle")); // NodeList [h4#tasktitle]
+// console.log(document.querySelectorAll("#tasktitle")[0]); // h4#tasktitle
+// console.log(document.querySelectorAll(".card-title")); // NodeList [h3.card-title]
+// console.log(document.querySelectorAll(".card-title")[0]); // NodeList [h3.card-title]
+// console.log(document.querySelectorAll("li")); // Nodelist
+// console.log(document.querySelectorAll("li")[2]);
+// console.log(document.querySelectorAll(".list-group-item")); // Nodelist
+// console.log(document.querySelectorAll("ul .list-group-item")[3]);
+// const listitems = document.getElementsByClassName("list-group-item");
+let listitems = document.querySelector("ul").getElementsByClassName("list-group-item");
+// console.log(listitems); // HTMLCollection(5)
+// console.log(typeof listitems); // object
+// console.log(listitems[1]);
+// Note: HTMLCollection nae so forEach nae loop pat loa ma ya
+// listitems.forEach((listitem) => {
+//   console.log(listitem); // error . forEach is not a function = array ma hote tat kaung ko looping pat mi tat error
+// });
+// Array change pee mha forEach nae looping pat
+listitems = Array.from(listitems);
+// console.log(listitems);
+// console.log(typeof listitems);
+// listitems.forEach((listitem) => {
+//   console.log(listitem);
+// });
+// const liitems = document.querySelectorAll(".list-group-item");
+const liitems = document.querySelectorAll("ul.list-group li.list-group-item");
+// Nodelist nae so tan looping pat loa ya tal
+// console.log(liitems); // Nodelist
+// liitems.forEach((liitem, idx, arr) => {
+//   //   console.log(liitem);
+//   liitem.innerHTML = `${++idx}. Have to Sleep <a href="#" id="delete-item2" class="delete-item"><i class="fa-solid fa-trash"></i></a>`;
+//   liitem.style.color = "red";
+//   liitem.style.fontSize = 20 + "px";
+// });
+const listodd = document.querySelectorAll("li:nth-child(odd)");
+console.log(listodd);
+listodd.forEach((listodd) => {
+  console.log(listodd);
+  listodd.style.backgroundColor = "gray";
+});
+const listeven = document.querySelectorAll("li:nth-child(even)");
+// console.log(listeven);
+// listeven.forEach((listeven) => {
+//   console.log(listeven);
+//   listeven.style.backgroundColor = "orange";
+// });
+for (let i = 0; i < listeven.length; i++) {
+  console.log(listeven[i]);
+  listeven[i].style.backgroundColor = "silver";
+}
