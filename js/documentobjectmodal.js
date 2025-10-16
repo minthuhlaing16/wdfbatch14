@@ -144,9 +144,9 @@ let getli = document.querySelector("li.list-group-item:first-child");
 let childrens;
 let getul = document.querySelector("ul.list-group");
 childrens = getul.children;
-console.log(childrens); // HTMLCollection
-console.log(childrens[1]);
-console.log(getul.children[1]);
+// console.log(childrens); // HTMLCollection
+// console.log(childrens[1]);
+// console.log(getul.children[1]);
 // childrens[1].textContent = "Have to Cook";
 // childrens[1].innerHTML = "Have to Read";
 getul.children[1].innerHTML = `Have to Sleep <a href="#" id="delete-item2" class="delete-item"><i class="fa-solid fa-trash"></i></a>`;
@@ -166,4 +166,76 @@ chl = getul.children[1].children[0].children[0].classList;
 chl = getul.children[1].children[0].children[0].classList.value;
 chl = getul.children[1].children[0].children[0].classList[0];
 chl = getul.children[1].children[0].children[0].classList[1];
-console.log(chl);
+// console.log(chl);
+// ==> Children to Parent
+// let getfirstli = document.querySelector("li");
+let getfirstli = document.querySelector("li.list-group-item");
+// console.log(getfirstli);
+let getparent = getfirstli.parentElement;
+// console.log(getparent);
+let cardfooter = getfirstli.parentElement.parentElement;
+// console.log(cardfooter);
+let card = getfirstli.parentElement.parentElement.parentElement;
+// console.log(card);
+let container = getfirstli.parentElement.parentElement.parentElement.parentElement;
+// console.log(container);
+//=> Next element Sibling
+let getsibling = getfirstli;
+// console.log(getsibling);
+getsibling = getfirstli.nextElementSibling;
+// console.log(getsibling);
+getsibling = getfirstli.nextElementSibling.nextElementSibling;
+// console.log(getsibling);
+getsibling = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling;
+// console.log(getsibling);
+getsibling = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+// console.log(getsibling);
+// Previous Element Sibling
+getsibling = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+// console.log(getsibling);
+let getprevsiblings = getsibling.previousElementSibling;
+// console.log(getprevsiblings);
+getprevsiblings = getsibling.previousElementSibling.previousElementSibling;
+// console.log(getprevsiblings);
+getprevsiblings = getsibling.previousElementSibling.previousElementSibling.previousElementSibling;
+// console.log(getprevsiblings);
+getprevsiblings =
+  getsibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
+// console.log(getprevsiblings);
+//Create Element
+const newli = document.createElement("li");
+// Add ID
+newli.id = "newitem";
+// Add Class
+// newli.className = "list-group-item haha";
+newli.classList.add("list-group-item");
+newli.classList.add("delete-me");
+newli.classList.add("remove-me");
+newli.classList.add("haha", "hehe", "hoho");
+// console.log(newli);
+newli.classList.remove("remove-me");
+// console.log(newli);
+// Add attribute , setAttribute(attname,value)
+newli.setAttribute("title", "newtitle");
+// console.log(newli);
+// console.log(newli.getAttribute("title"));
+// console.log(newli.getAttributeNames());
+// console.log(newli.getAttributeNames()[0]);
+// console.log(newli.getAttributeNames()[1]);
+// console.log(newli.getAttributeNames()[2]);
+// newli.textContent = "Hello world";
+// newli.innerText = "Hello John";
+// newli.innerHTML = `Hello John <a href="#" id="delete-item2" class="delete-item"><i class="fa-solid fa-trash"></i></a>`;
+// let newText = document.createTextNode("Hello World!");
+// newli.appendChild(newText);
+newli.appendChild(document.createTextNode("have to cook!"));
+const newlink = document.createElement("a");
+newlink.id = "delete-item6";
+newlink.classList = "delete-item";
+newlink.href = "#";
+const newicon = document.createElement("i");
+newicon.classList.add("fa-solid", "fa-trash");
+newlink.appendChild(newicon);
+newli.appendChild(newlink);
+getul.appendChild(newli);
+console.log(newli);
