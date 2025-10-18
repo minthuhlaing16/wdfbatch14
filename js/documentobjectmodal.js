@@ -167,6 +167,12 @@ chl = getul.children[1].children[0].children[0].classList.value;
 chl = getul.children[1].children[0].children[0].classList[0];
 chl = getul.children[1].children[0].children[0].classList[1];
 // console.log(chl);
+// * Child ELement Count
+// chl = getul.children.length; //? di nee nae lae khaw loa ya tal
+chl = getul.childElementCount; //* di nee nae lae khaw loa ya tal
+chl = getul.children[0].children; // ! HTMLCollection(1)
+chl = getul.children[0].childElementCount; //! 1
+console.warn(chl);
 // ==> Children to Parent
 // let getfirstli = document.querySelector("li");
 let getfirstli = document.querySelector("li.list-group-item");
@@ -202,7 +208,7 @@ getprevsiblings = getsibling.previousElementSibling.previousElementSibling.previ
 getprevsiblings =
   getsibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
 // console.log(getprevsiblings);
-//Create Element
+// Create Element
 const newli = document.createElement("li");
 // Add ID
 newli.id = "newitem";
@@ -238,4 +244,25 @@ newicon.classList.add("fa-solid", "fa-trash");
 newlink.appendChild(newicon);
 newli.appendChild(newlink);
 getul.appendChild(newli);
-console.log(newli);
+// console.log(newli);
+// ==> Replace Element , replaceChild(new,old)
+const oldtitleh4 = document.getElementById("tasktitle");
+// console.log(oldtitleh4);
+const newtitleh2 = document.createElement("h2");
+newtitleh2.id = "tasktitle";
+// newtitleh2.textContent = "All My Tasks";
+const newcaption = document.createTextNode("hello john how are you?");
+newtitleh2.appendChild(newcaption);
+newtitleh2.style.color = "yellow";
+newtitleh2.style.backgroundColor = "black";
+newtitleh2.style.textAlign = "center";
+const getcardfooter = document.querySelector(".card-footer");
+getcardfooter.replaceChild(newtitleh2, oldtitleh4);
+// console.log(getcardfooter);
+//! Remove Element (self) ==> remove()
+const getlis = document.querySelectorAll("li");
+// console.log(getlis); //? Nodelist(6)
+getlis[0].remove();
+// console.log(getlis); //? Nodelist(6)
+getlis[1].remove();
+// console.log(getlis.length); //! 6
