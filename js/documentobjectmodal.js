@@ -115,7 +115,7 @@ const liitems = document.querySelectorAll("ul.list-group li.list-group-item");
 // Nodelist nae so tan looping pat loa ya tal
 // console.log(liitems); // Nodelist
 // liitems.forEach((liitem, idx, arr) => {
-//   //   console.log(liitem);
+//   console.log(liitem);
 //   liitem.innerHTML = `${++idx}. Have to Sleep <a href="#" id="delete-item2" class="delete-item"><i class="fa-solid fa-trash"></i></a>`;
 //   liitem.style.color = "red";
 //   liitem.style.fontSize = 20 + "px";
@@ -172,7 +172,7 @@ chl = getul.children[1].children[0].children[0].classList[1];
 chl = getul.childElementCount; //* di nee nae lae khaw loa ya tal
 chl = getul.children[0].children; // ! HTMLCollection(1)
 chl = getul.children[0].childElementCount; //! 1
-console.warn(chl);
+// console.warn(chl);
 // ==> Children to Parent
 // let getfirstli = document.querySelector("li");
 let getfirstli = document.querySelector("li.list-group-item");
@@ -262,7 +262,53 @@ getcardfooter.replaceChild(newtitleh2, oldtitleh4);
 //! Remove Element (self) ==> remove()
 const getlis = document.querySelectorAll("li");
 // console.log(getlis); //? Nodelist(6)
-getlis[0].remove();
+// getlis[0].remove();
 // console.log(getlis); //? Nodelist(6)
-getlis[1].remove();
+// getlis[1].remove();
 // console.log(getlis.length); //! 6
+// * Remove child element, removeChild()
+const getfirstul = document.querySelector("ul");
+// console.log(getfirstul);
+// getfirstul.remove(); // ? ul ta khu lone del tar
+// console.log(getfirstul.children); // ? HTMLCollection(6)
+// console.log(getfirstul.children[0]); // ? first li ya mal
+// getfirstul.removeChild(getfirstul.children[0]);
+// console.log(getfirstul.children); // ? HTMLCollection(5)
+// todo ==> Attribute
+const firstli = document.querySelector("li");
+// console.log(firstli);
+const firstchild = firstli.children[0];
+console.log(firstchild);
+console.log(firstchild.id);
+console.log(firstchild.getAttribute("id"));
+console.log(firstchild.href); //! http://127.0.0.1:5500/l52documentobjectmodal.html#
+console.log(firstchild.getAttribute("href")); //? #
+console.log(firstchild.title);
+console.log(firstchild.getAttribute("title"));
+console.log(firstchild.alt); //! undefined
+console.log(firstchild.getAttribute("alt")); // ? iamalt
+let hasatt = firstchild.hasAttribute("href");
+console.log(hasatt); //? true ==> boolean pay mal
+hasatt = firstchild.hasAttribute("hay");
+console.log(hasatt); // ! false ==> hay so tat att ma shi loa
+//! className Vs classList
+// firstchild.className = "delete-item delete-myself";
+// firstchild.className = "delete-item delete-ourself";
+// console.log(firstchild);
+console.log(firstchild.classList);
+console.log(firstchild.classList[0]); // ? delete-item
+firstchild.classList.add("delete-herself", "delete-ourselves");
+firstchild.classList.remove("delete-ourselves"); //! multi del loa ya tal
+console.log(firstchild);
+if (firstchild.className === "delete-item delete-herself") {
+  console.log("yes"); // ? yes ==> note: className ta htet hte tuu mha ya mar space taung char loa ma ya buu
+} else {
+  console.log("No");
+}
+
+// ! classList.contains()
+if (firstchild.classList.contains("delete-herself")) {
+  console.log("yes"); //? contains mar s par mal
+} else {
+  console.log("no");
+}
