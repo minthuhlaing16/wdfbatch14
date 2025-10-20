@@ -278,37 +278,117 @@ const getfirstul = document.querySelector("ul");
 const firstli = document.querySelector("li");
 // console.log(firstli);
 const firstchild = firstli.children[0];
-console.log(firstchild);
-console.log(firstchild.id);
-console.log(firstchild.getAttribute("id"));
-console.log(firstchild.href); //! http://127.0.0.1:5500/l52documentobjectmodal.html#
-console.log(firstchild.getAttribute("href")); //? #
-console.log(firstchild.title);
-console.log(firstchild.getAttribute("title"));
-console.log(firstchild.alt); //! undefined
-console.log(firstchild.getAttribute("alt")); // ? iamalt
+// console.log(firstchild);
+// console.log(firstchild.id);
+// console.log(firstchild.getAttribute("id"));
+// console.log(firstchild.href); //! http://127.0.0.1:5500/l52documentobjectmodal.html#
+// console.log(firstchild.getAttribute("href")); //? #
+// console.log(firstchild.title);
+// console.log(firstchild.getAttribute("title"));
+// console.log(firstchild.alt); //! undefined
+// console.log(firstchild.getAttribute("alt")); // ? iamalt
 let hasatt = firstchild.hasAttribute("href");
-console.log(hasatt); //? true ==> boolean pay mal
+// console.log(hasatt); //? true ==> boolean pay mal
 hasatt = firstchild.hasAttribute("hay");
-console.log(hasatt); // ! false ==> hay so tat att ma shi loa
+// console.log(hasatt); // ! false ==> hay so tat att ma shi loa
 //! className Vs classList
 // firstchild.className = "delete-item delete-myself";
 // firstchild.className = "delete-item delete-ourself";
 // console.log(firstchild);
-console.log(firstchild.classList);
-console.log(firstchild.classList[0]); // ? delete-item
+// console.log(firstchild.classList);
+// console.log(firstchild.classList[0]); // ? delete-item
 firstchild.classList.add("delete-herself", "delete-ourselves");
 firstchild.classList.remove("delete-ourselves"); //! multi del loa ya tal
-console.log(firstchild);
+// console.log(firstchild);
 if (firstchild.className === "delete-item delete-herself") {
-  console.log("yes"); // ? yes ==> note: className ta htet hte tuu mha ya mar space taung char loa ma ya buu
+  // console.log("yes"); // ? yes ==> note: className ta htet hte tuu mha ya mar space taung char loa ma ya buu
 } else {
-  console.log("No");
+  // console.log("No");
 }
 
 // ! classList.contains()
 if (firstchild.classList.contains("delete-herself")) {
-  console.log("yes"); //? contains mar s par mal
+  // console.log("yes"); //? contains mar s par mal
 } else {
-  console.log("no");
+  // console.log("no");
+}
+
+// ? addEventListener(eventtype,callbackfunction);
+
+const clearbtn = document.querySelector(".clear-tasks");
+
+// todo Method 1
+// clearbtn.addEventListener("click", function (e) {
+//   // console.log("hello I am add event listener.");
+//   // console.log(e); //? PointerEvent
+//   // console.log(e.target); // ? <a href="#" id="clearall" class="clear-tasks">Clear Tasks</a>
+//   // console.log(e.target.id); // ? clearall
+//   // console.log(e.target.className); //? clear-tasks
+//   // console.log(e.target.classList); //? DOMTokenList ['clear-tasks', value: 'clear-tasks']
+//   // console.log(e.target.classList[0]); //? clear-tasks
+//   // console.log(this); //! Event pay sa yar ma lol
+//   // console.log(this.id); // ? clearall
+//   // console.log(this.className); //? clear-tasks
+//   // console.log(this.classList); //? DOMTokenList
+//   // console.log(this.classList.value); //? clear-tasks
+//   // e.preventDefault(); //! kill link
+// });
+
+// todo Method 2
+// clearbtn.addEventListener("click", myclick);
+
+function myclick(e) {
+  // console.log("hello my name is my click...");
+  // console.log(e);
+  // console.log(e.target);
+  // console.log(e.target.textContent);
+  // console.log(e.target.id);
+  // console.log(e.target.className);
+  // console.log(e.target.classList);
+  // console.log(e.target.classList[0]);
+  // console.log(e.target.classList.value);
+  // console.log(this);
+  // console.log(this.id);
+  // console.log(this.textContent);
+  // console.log(this.className);
+  // console.log(this.classList);
+  // console.log(this.classList.value);
+  // console.log(this.classList[0]);
+  // e.target.textContent = "Finish";
+  // this.textContent = "Done";
+  // todo Coordinate Event ==> clientX , clientY
+  // console.log(e);
+  // const clientx = e.clientX;
+  // const clienty = e.clientY;
+  // console.log(clientx, clienty);
+  // todo offsetX , offsetY
+  const offx = e.offsetX;
+  const offy = e.offsetY;
+  console.log(`offsetX: ${offx}, offsetY: ${offy}`);
+}
+
+// ! Example for clientX and clientY on mousemove event
+// clearbtn.addEventListener("mousemove", showCoordinate);
+
+// function showCoordinate(e) {
+//   // let clientx = e.clientX;
+//   // let clienty = e.clientY;
+//   // console.log(`ClientX: ${clientx} , ClientY: ${clienty}`);
+//   //? offsetX and offsetY
+//   const offx = e.offsetX;
+//   const offy = e.offsetY;
+//   console.log(`offsetX: ${offx}, offsetY: ${offy}`);
+// }
+
+// todo Mouse Event (Pointer Event) ["click","dblclick","mousedown","mouseup","mousemove"]
+
+const clbtn = document.querySelector(".clear-tasks");
+
+// ? click,dblclick,mousedown,mouseup,mousemove
+
+clbtn.addEventListener("mousemove", mouseeventtype);
+
+function mouseeventtype(e) {
+  e.preventDefault();
+  console.log(`Event Type: ${e.type}`);
 }
