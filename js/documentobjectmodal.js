@@ -382,13 +382,86 @@ function myclick(e) {
 
 // todo Mouse Event (Pointer Event) ["click","dblclick","mousedown","mouseup","mousemove"]
 
-const clbtn = document.querySelector(".clear-tasks");
+// const clbtn = document.querySelector(".clear-tasks");
 
 // ? click,dblclick,mousedown,mouseup,mousemove
 
-clbtn.addEventListener("mousemove", mouseeventtype);
+// clbtn.addEventListener("mousemove", mouseeventtype);
 
 function mouseeventtype(e) {
   e.preventDefault();
   console.log(`Event Type: ${e.type}`);
 }
+
+// ? mouseenter event
+const getcard = document.querySelector(".card");
+
+// getcard.addEventListener("mouseenter", mouseeventtype);
+
+//? mouseleave event
+// getcard.addEventListener("mouseleave", mouseeventtype);
+
+//? mousemove event
+// getcard.addEventListener("mousemove", mouseeventtype);
+
+const gettasktitle = document.querySelector("#tasktitle");
+//? mouseover event(element to element)
+// getcard.addEventListener("mousemove", function (e) {
+//   gettasktitle.textContent = `MouseX: ${e.offsetX} , MouseY: ${e.offsetY}`;
+//   document.body.style.backgroundColor = `rgba(${e.offsetX},${e.offsetY},${e.offsetX},.6)`;
+//   document.body.style.transition = `all 1s linear`;
+// });
+
+//todo submit ==> Note: form ko listen ka tal
+
+// const getbtn = document.querySelector(".btn");
+
+// getbtn.addEventListener("click", function (e) {
+//   console.log("sub is working...");
+//   e.preventDefault();
+// });
+
+// const getform = document.querySelector(".form");
+// getform.addEventListener("submit", function (e) {
+//   console.log("Hello I am submit form...");
+//   console.log(`EventType: ${e.type}`);
+//   e.preventDefault();
+// });
+
+// todo Input Event (keyboard event) ==> keydown,keyup,keypress
+const getinput = document.querySelector("#task");
+
+function inputeventtype(e) {
+  console.log(e.type);
+  console.log(e.target);
+  // console.log(e.target.value);
+  // console.log(this.value);
+  console.log(getinput.value);
+  console.log(this);
+}
+// * keydown event
+// getinput.addEventListener("keydown", inputeventtype);
+
+// * keyup event
+// getinput.addEventListener("keyup", inputeventtype);
+
+// * keypress event and keydown are the same
+// getinput.addEventListener("keypress", inputeventtype);
+
+//* input event
+// getinput.addEventListener("input", inputeventtype);
+
+//* focus event
+// getinput.addEventListener("focus", inputeventtype);
+
+//* blur event
+// getinput.addEventListener("blur", inputeventtype);
+
+//* copy event (ctrl+c/rightclick copy)
+// getinput.addEventListener("copy", inputeventtype);
+
+//* cut event (ctrl+x/rightclick cut)
+// getinput.addEventListener("cut", inputeventtype);
+
+//* paste (ctrl+v/rightclick paste)
+// getinput.addEventListener("paste", inputeventtype);
