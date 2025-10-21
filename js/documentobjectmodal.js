@@ -465,3 +465,77 @@ function inputeventtype(e) {
 
 //* paste (ctrl+v/rightclick paste)
 // getinput.addEventListener("paste", inputeventtype);
+
+// ? Event Bubbling ==> card title so card title out mhar shi ta mya element a kone nate paw mal
+// document.querySelector(".card-title").addEventListener("click", function () {
+//   console.log("I am card title");
+// });
+
+// document.querySelector(".card-header").addEventListener("click", () => {
+//   console.log("I am card header");
+// });
+
+// document.querySelector(".card-footer").addEventListener("click", () => {
+//   console.log("i am card footer");
+// });
+
+// document.querySelector(".card").addEventListener("click", () => {
+//   console.log("I am card..");
+// });
+
+// ? Event Delegation
+const getdeleteitem = document.querySelector(".delete-item");
+// console.log(getdeleteitem);
+
+// getdeleteitem.addEventListener("click", function (e) {
+//   console.log(e.target); //! e.target ka i tag ko ya tal
+//   console.log(this); //! this ka a tag ko ya tal
+// });
+
+// getdeleteitem.addEventListener("click", (e) => {
+//   console.log(e.target); //! show i tag
+//   console.log(this); //! show window object cuz arrow function
+// });
+
+// todo ==> Example of event delegation
+document.body.addEventListener("click", eventdelegation);
+
+function eventdelegation(e) {
+  // console.log(e.target);
+  // console.log(e.target.className);
+
+  //? Method 1
+  // if (e.target.className === "fa-solid fa-trash") {
+  //   console.log("I am trash");
+  // }
+
+  //? Method 2
+  if (e.target.classList.contains("fa-solid", "fa-trash")) {
+    console.log("I am working.. I am a motherfucking trash...");
+  }
+
+  if (e.target.className === "list-group-item") {
+    console.log("I am list items");
+  }
+
+  if (e.target.classList.contains("card-title")) {
+    console.log("Card title motherfucker");
+  }
+
+  if (e.target.parentElement.className === "delete-item") {
+    console.log("I am a tag");
+  }
+
+  if (e.target.parentElement.classList.contains("delete-item", "delete-herself")) {
+    // console.log("I am also a tag.");
+    e.target.parentElement.parentElement.remove();
+  }
+}
+
+// todo Form Datas to LocalStorage
+document.querySelector("#form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const getnewtask = document.getElementById("task").value;
+  // console.log(getnewtask);
+  localStorage.setItem("mytasks", getnewtask);
+});
