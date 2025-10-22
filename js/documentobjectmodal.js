@@ -537,5 +537,36 @@ document.querySelector("#form").addEventListener("submit", function (e) {
   e.preventDefault();
   const getnewtask = document.getElementById("task").value;
   // console.log(getnewtask);
-  localStorage.setItem("mytasks", getnewtask);
+
+  let alltasks;
+
+  if (localStorage.getItem("mytasks") === null) {
+    alltasks = [];
+  } else {
+    alltasks = JSON.parse(localStorage.getItem("mytasks"));
+    console.log(alltasks);
+    console.log(typeof alltasks);
+  }
+  alltasks.push(getnewtask);
+  localStorage.setItem("mytasks", JSON.stringify(alltasks));
+  // localStorage.clear();
 });
+
+console.log(localStorage.getItem("mytasks"));
+console.log(typeof localStorage.getItem("mytasks"));
+
+console.log(JSON.parse(localStorage.getItem("mytasks")));
+console.log(typeof JSON.parse(localStorage.getItem("mytasks")));
+
+const getmytasks = JSON.parse(localStorage.getItem("mytasks"));
+
+getmytasks.forEach((getmytask) => {
+  console.log(getmytask);
+});
+
+//! JSON Object
+
+/* 
+todo ==> 1. input hte ka kaung ko first json format change LS hte htae
+todo ==> 2. LS hte ka kaung ko pyan khaw ka mal String nae ya lar tat kaung ko array pyan pyaung ya lar tat array ko push nae have to eat ko htae JSON format pyan pyaung pee mha LS hte twr tane
+*/
