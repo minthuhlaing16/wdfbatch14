@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Playwrite+DE+SAS:wght@100..400&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Playwrite DE SAS";
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ! Test code */
+.container {
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(45deg, red, blue);
+  color: whitesmoke;
+  border: 2px solid gold;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px gray;
+}
+
+.container h3 {
+  font-size: 20px;
+  text-align: center;
+  border: 1px dashed gold;
+  border-left: 0;
+  border-right: 0;
+  padding: 5px 0;
+}
+
+.container p {
+  text-align: center;
+  text-shadow: 20px 10px 10px rgb(214, 214, 214);
+}
+
+.form-group .form-control {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  text-align: center;
+  color: navy;
+}
+
+.form-group .form-control::placeholder {
+  text-align: center;
+  opacity: 0.5;
+}
+
+.form-group .form-control:focus {
+  border-bottom: 1px solid gold;
+}
+
+.btn {
+  width: 100%;
+  padding: 5px;
+  background: linear-gradient(45deg, crimson, navy);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 5px auto;
+  transition: all 0.1s linear;
+}
+
+.btn:hover {
+  border: 2px solid gold;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.message1,
+.message2 {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
