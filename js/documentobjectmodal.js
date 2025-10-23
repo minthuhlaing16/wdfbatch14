@@ -550,19 +550,69 @@ document.querySelector("#form").addEventListener("submit", function (e) {
   alltasks.push(getnewtask);
   localStorage.setItem("mytasks", JSON.stringify(alltasks));
   // localStorage.clear();
+
+  // todo sar yite pee tar nae auto pyn del chin tar
+  document.getElementById("task").value = "";
+  // todo cursor pyan pay tar
+  document.getElementById("task").focus;
+
+  // ? clear li
+  getul.innerHTML = "";
+
+  //? add new li datas
+  newlitodom();
 });
 
-console.log(localStorage.getItem("mytasks"));
-console.log(typeof localStorage.getItem("mytasks"));
+// console.log(localStorage.getItem("mytasks"));
+// console.log(typeof localStorage.getItem("mytasks"));
 
-console.log(JSON.parse(localStorage.getItem("mytasks")));
-console.log(typeof JSON.parse(localStorage.getItem("mytasks")));
+// console.log(JSON.parse(localStorage.getItem("mytasks")));
+// console.log(typeof JSON.parse(localStorage.getItem("mytasks")));
 
-const getmytasks = JSON.parse(localStorage.getItem("mytasks"));
+// const getmytasks = JSON.parse(localStorage.getItem("mytasks"));
 
-getmytasks.forEach((getmytask) => {
-  console.log(getmytask);
-});
+// getmytasks.forEach((getmytask) => {
+//   console.log(getmytask);
+// });
+
+//todo 1. Create new li, existing data
+//todo 2. new task , ui show
+function newlitodom() {
+  // ? clear li
+  getul.innerHTML = "";
+
+  let getalltasks = localStorage.getItem("mytasks");
+  console.log(getalltasks); // ? ["have to go ","have to go ","have to cook"]
+  console.log(typeof getalltasks); //? String
+  getalltasks = JSON.parse(getalltasks);
+  console.log(getalltasks); //? (3) ['have to go ', 'have to go ', 'have to cook']
+  console.log(typeof getalltasks); // ? object
+  getalltasks.forEach((getalltask, idx) => {
+    // console.log(getalltask);
+    // todo create new li
+    const li = document.createElement("li");
+    li.id = "new-item";
+    li.classList.add("list-group-item");
+    li.appendChild(document.createTextNode(getalltask));
+    const link = document.createElement("a");
+    link.href = "javascript:void(0);";
+    link.id = "delete-item" + ++idx;
+    link.classList.add("delete-item");
+    const italic = document.createElement("i");
+    italic.classList.add("fa-solid", "fa-trash");
+    // link.appendChild(document.createTextNode("Delete"));
+    link.appendChild(italic);
+    li.appendChild(link);
+    getul.appendChild(li);
+    console.log(getul);
+  });
+}
+
+// ! Method 1
+// newlitodom();
+
+// ! Method 2
+document.addEventListener("DOMContentLoaded", newlitodom);
 
 //! JSON Object
 
