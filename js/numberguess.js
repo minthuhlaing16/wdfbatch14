@@ -8,8 +8,8 @@ const minnum = document.querySelector(".minnumber"),
 
 const min = 1,
   max = 10,
-  winningnum = 5;
-
+  winningnum = randomnum(min, max);
+console.log(winningnum);
 let gameleft = 3;
 
 minnum.textContent = min;
@@ -39,16 +39,18 @@ getbtn.addEventListener("click", function (e) {
     //? Game Over ==> WON
     // console.log("you won.");
     // todo ==> disabled getinput
-    getinput.disabled = true;
+    // getinput.disabled = true;
     // todo ==> border color to green
-    getinput.style.borderColor = "green";
+    // getinput.style.borderColor = "green";
     // todo ==> message1 alert
     // todo ==> gameover, color green
     // getmessage1.textContent = `${winningnum} is correct. You Won.`;
     // getmessage1.style.color = "lightgreen";
-    setmessage1(`${winningnum} is correct. You Won.`, "lightgreen");
+    // setmessage1(`${winningnum} is correct. You Won.`, "lightgreen");
     // todo ==> play again
-    getbtn.value = "Play Again!";
+    // getbtn.value = "Play Again!";
+
+    gameover(true, `${winningnum} is correct. You Won.`);
   } else {
     // ? Method 1
     // gameleft--;
@@ -60,18 +62,20 @@ getbtn.addEventListener("click", function (e) {
     if (gameleft === 0) {
       //! Game Over ==> LOSE
       // todo ==> disabled getinput
-      getinput.disabled = true;
+      // getinput.disabled = true;
       // todo ==> getinput border color red
-      getinput.style.borderColor = "red";
-      getinput.style.borderWidth = "2px";
-      getinput.style.borderStyle = "dashed";
+      // getinput.style.borderColor = "red";
+      // getinput.style.borderWidth = "2px";
+      // getinput.style.borderStyle = "dashed";
       // todo ==> message 1 alert
       // todo ==> gameover, yellow color
       // getmessage1.textContent = `Game Over,The correct number is ${winningnum}.`;
       // getmessage1.style.color = "yellow";
-      setmessage1(`Game Over,The correct number is ${winningnum}.`, "yellow");
+      // setmessage1(`Game Over,The correct number is ${winningnum}.`, "yellow");
       // todo ==> Play Again..
-      getbtn.value = "Play Again!";
+      // getbtn.value = "Play Again!";
+
+      gameover(false, `Game Over,The correct number is ${winningnum}.`);
     } else {
       // ! Continue GAME
       // todo ==> getinput border color to red
@@ -102,4 +106,47 @@ function setmessage2(msg, color) {
   setTimeout(() => {
     getmessage2.textContent = "";
   }, 2000);
+}
+
+function gameover(won, msg) {
+  //? Method 1
+  let color;
+  won === true ? (color = "lightgreen") : (color = "red");
+
+  //? Method 2
+  // let color = won === true ? "lightgreen" : "red";
+
+  // todo ==> disabled input
+  getinput.disabled = true;
+  // todo ==> gatinput border color to green
+  getinput.style.borderColor = color;
+  // todo ==> message1 alert
+  // todo ==> gameover, color
+  setmessage1(msg, color);
+  // todo ==> play again
+  getbtn.value = "Play Again!!";
+  // todo ==> add class
+  //? Method 1
+  // getbtn.className = "btn reload";
+  //? Method 2
+  // getbtn.className += " reload";
+  //? Method 3
+  getbtn.classList.add("reload");
+}
+
+//? Note click = mouseup
+
+getgameform.addEventListener("mousedown", function (e) {
+  if (e.target.classList.contains("reload")) {
+    // console.log("hi");
+    //? reload page
+    location.reload();
+  }
+});
+
+// todo Random number
+function randomnum(min, max) {
+  // * Random number 1 to 10;
+  let getrdm = Math.round(Math.random() * (max - min) + 1);
+  return getrdm;
 }
