@@ -6,11 +6,62 @@
     <title>Navigator</title>
   </head>
   <body>
-    <script type="text/javascript">
-      console.log(navigator.userAgent); // ? Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
-      console.log(navigator);
-      console.log(navigator.platform); // ? Linux x86_64
-      console.log(navigator.onLine); // ? true
+    <script>
+      // console.log(navigator.userAgent); // ? Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+      // console.log(navigator);
+      // console.log(navigator.platform); // ? Linux x86_64
+      // console.log(navigator.onLine); // ? true
+
+      // ==> Detect Browser (Method 1)
+      function detectbrowser() {
+        const useragent = navigator.userAgent;
+        // console.log(useragent);
+        if (useragent.includes("Firefox")) {
+          return "Mozilla Firefox..";
+        } else if (useragent.includes("OPR")) {
+          return "Opera..";
+        } else if (useragent.includes("Edg")) {
+          return "Microsoft Edge";
+        } else if (useragent.includes("Safari") && !useragent.includes("Chrome")) {
+          return "Safari..";
+        } else if (useragent.includes("Chrome") && !useragent.includes("OPR")) {
+          return "Google Chrome";
+        } else {
+          return "Other Browser...";
+        }
+      }
+      console.log("Browser: ", detectbrowser());
+
+      // .test() ==> regular expression pattern
+      let pattern = /apple/;
+      console.log(pattern.test("I like apple.")); // true ==> apple par lar sit tar
+      console.log(pattern.test("I like apples.")); // true;
+      console.log(pattern.test("I like Apple.")); // false;
+      console.log(pattern.test("I like APPLE.")); // fales;
+
+      let string = /^Hello/;
+      console.log(string.test("hi hello.")); // false ==> hello nae ma sa loa
+      console.log(string.test("hello hi")); // false
+      console.log(string.test("Hello hi")); // true
+      console.log(string.test("HELLO hi")); // false
+
+      // Detect os (Method 2)
+      function detectos() {
+        let useragent = navigator.userAgent;
+        if (useragent.includes("Windows")) return "OS: Windows";
+        if (useragent.includes("Linux") && !useragent.includes("Android")) return "OS: Linux";
+        if (useragent.includes("Mac") && !useragent.includes("iPhone")) return "OS: MacOS";
+        if (useragent.includes("Android")) return "OS: MacOS";
+        if (/iPhone|iPad/.test(useragent)) return "iOS";
+        return "Unknown OS.";
+      }
+      console.log(detectos());
+      // Detect Device
+      function ismobiledevice() {
+        userAgent = navigator.userAgent;
+        return /Android|iPhone|iPad|Windows Phone/.test(userAgent);
+      }
+      console.log("Device Type: ", ismobiledevice() ? "Mobile" : "Desktop");
     </script>
   </body>
 </html>
