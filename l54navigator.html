@@ -6,6 +6,10 @@
     <title>Navigator</title>
   </head>
   <body>
+    <button type="button" onclick="clicktoclipboard('hello world')">Hello world copied</button>
+    <button type="button" onclick="clicktoclipboard('john doe')">john doe copied</button>
+    <button type="button" onclick="clicktoclipboard('susan')">susan copied</button>
+    <button type="button" onclick="clicktoclipboard('alice')">alice copied</button>
     <script>
       // console.log(navigator.userAgent); // ? Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
       // console.log(navigator);
@@ -62,6 +66,69 @@
         return /Android|iPhone|iPad|Windows Phone/.test(userAgent);
       }
       console.log("Device Type: ", ismobiledevice() ? "Mobile" : "Desktop");
+
+      // Clipboard (readText(),writeText())
+      // console.log(navigator.clipboard);
+      // ? Method 1
+      // navigator.clipboard.writeText("hello world my name is clipboard.")
+      // .then(() =>console.log("Copied to clipboard!"))
+      // .catch(err => console.error("Failed Copied: " , err));
+
+      // ? Method 2
+      // function clicktoclipboard(){
+      //    navigator.clipboard.writeText("hello John Doe")
+      //   .then(() =>console.log("Copied to clipboard!"))
+      //   .catch(err => console.error("Failed Copied: " , err));
+      // }
+      // clicktoclipboard()
+
+      // Method 3
+       function clicktoclipboard(value){
+         navigator.clipboard.writeText(`${value}`)
+        .then(() =>console.log("Copied to clipboard!"))
+        .catch(err => console.error("Failed Copied: " , err));
+      }
+
+      // navigator.clipboard.readText()
+      // .then(text => console.log("Clipboard result: ",text))
+      // .catch(err => console.error("Failed: ",err));
+
+      // ==> Battery
+      navigator.getBattery()
+      .then((battery)=>{
+        console.log(`Battery Level: ${battery.level*100}%`); // 0 to 1
+        console.log(`Charging: ${battery.charging}`); // true
+        console.log(`Time to full: ${battery.chargingTime} seconds.`);
+        console.log(`Time to empty: ${battery.dischargingTime} seconds.`);
+
+        battery.addEventListener("levelchange",()=>{
+          console.log(`Battery Level: ${battery.level * 100}%`);
+        })
+
+        battery.addEventListener("chargingchange",()=>{
+          console.log(`Charging status: ${battery.charging}`)
+        })
+      })
+      .catch(err => console.error("Failed: ", err));
+
+      // Geo location
+      console.log(navigator.geolocation);
+      // console.log(navigator.geolocation.getCurrentPosition());
+
+      // check permission status
+      navigator.permissions.query({name:"geolocation"})
+      // .then(result => console.log("Geolocation permission result: ",result))
+      .then(result => {
+      console.log("Geolocation permission result: ",result.state)
+      navigator.geolocation.getCurrentPosition(position=>{
+
+        console.log(position);
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+        
+      },err=>console.log("Failed: ",err.message)); 
+      }) // granted,prompt,denied . Note: go to chrome setting ==> privacy and security ==> site settings ==> route ==> choose permission
+      .catch(err => console.log(err));
     </script>
   </body>
 </html>
