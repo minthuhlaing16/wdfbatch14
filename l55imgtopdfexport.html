@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>imgtopdf</title>
+    <link rel="stylesheet" href="css/imgtopdf.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/upload.png" alt="display" id="display" class="display" />
+      <div class="btncontainer">
+        <label for="fileinput" class="uploadbtn">
+          Upload Image
+          <input type="file" name="fileinput" id="fileinput" class="fileinput" accept=".png,.jpg,.jpeg" />
+        </label>
+        <button type="button" class="downloadbtn" onclick="pdfloader()">Download PDF</button>
+      </div>
+    </div>
+    <script src="js/imgtopdf.js"></script>
+  </body>
+</html>
