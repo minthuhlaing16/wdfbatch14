@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+	font-family:"Lobster Two";
+}
+body{
+	height: 100vh;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.dark-mode{
+	background-color: #222;
+	color: #f4f4f4;
+}
+
+.container{
+	max-width: 500px;
+	background-color: #fff;
+	color: #333;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	margin: auto;
+	padding: 20px;
+}
+
+/* ? for dark mode */
+.dark-mode .container{
+	background-color: #444;
+	color: #f4f4f4;
+}
+
+.options .optionbtn{
+	width: 200px;
+	display: block;
+	border: none;
+	background-color: #e3e3e3;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 120px 0 120px 0;
+}
+
+.options .optionbtn:hover{
+	background-color: #333;
+	color: #fff;
+	transform: scale(1.1);
+}
+
+/* ? for dark mode */
+.dark-mode .options .optionbtn{
+	background-color: #666;
+	color: #fff;
+}
+
+.options .correct{
+	background-color: steelblue;
+	color: #fff;
+}
+
+.wrong{
+	background-color: red !important;
+	color: #fff !important;
+}
+
+.nextbtn{
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 15px;
+	padding: 5px 15px;
+	display: none;
+}	
+
+/* ? for dark mode */
+.dark-mode .nextbtn,.dark-mode #result button{
+	background: #888;
+	color: #fff;
+	border: none;
+}
+
+#result{
+	display: none;
+}
+
+#result button{
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 15px;
+	padding: 10px 20px;
+}
+
+
