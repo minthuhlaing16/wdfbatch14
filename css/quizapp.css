@@ -59,8 +59,8 @@ body{
 }
 
 .options .correct{
-	background-color: steelblue;
-	color: #fff;
+	background-color: steelblue !important;
+	color: #fff !important;
 }
 
 .wrong{
