@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listgroup</title>
+    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>list group</h1>
+      <ul class="list-group">
+        <!-- ? bal nay yar ko hover lote lae ti chin yin ==> list-group-item-action  -->
+        <li class="list-group-item list-group-item-action">Red</li>
+        <li class="list-group-item list-group-item-action">Green</li>
+        <li class="list-group-item list-group-item-action">Blue</li>
+        <li class="list-group-item list-group-item-action">Orange</li>
+        <li class="list-group-item list-group-item-action">White</li>
+      </ul>
+      <hr />
+      <ol class="list-group">
+        <!-- ? bar ko yway htr lae ti say chin tal so ==> active -->
+        <li class="list-group-item list-group-item-action">john</li>
+        <li class="list-group-item list-group-item-action">susan</li>
+        <li class="list-group-item list-group-item-action active">bob</li>
+        <li class="list-group-item list-group-item-action">hlahla</li>
+        <li class="list-group-item list-group-item-action disabled">myamya</li>
+      </ol>
+      <hr />
+      <!-- ? ul ko number nae phaw pya say chin tal so yin ==> list-group-numbered -->
+      <ul class="list-group list-group-numbered">
+        <li class="list-group-item list-group-item-action active">one</li>
+        <li class="list-group-item list-group-item-action">two</li>
+        <li class="list-group-item list-group-item-action">three</li>
+        <li class="list-group-item list-group-item-action">four</li>
+        <li class="list-group-item list-group-item-action">five</li>
+      </ul>
+      <hr />
+      <div class="list-group list-group-numbered">
+        <a href="javascript:void(0);" class="list-group-item list-group-item-action active">link one</a>
+        <a href="javascript:void(0);" class="list-group-item list-group-item-action">link two</a>
+        <a href="javascript:void(0);" class="list-group-item list-group-item-action">link three</a>
+        <a href="javascript:void(0);" class="list-group-item list-group-item-action">link four</a>
+        <a href="javascript:void(0);" class="list-group-item list-group-item-action">link five</a>
+      </div>
+      <hr />
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action list-group-item-primary">primary</li>
+        <li class="list-group-item list-group-item-action list-group-item-secondary">secondary</li>
+        <li class="list-group-item list-group-item-action list-group-item-success">success</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning">warning</li>
+        <li class="list-group-item list-group-item-action list-group-item-danger">danger</li>
+        <li class="list-group-item list-group-item-action list-group-item-info">info</li>
+        <li class="list-group-item list-group-item-action list-group-item-light">light</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">dark</li>
+      </ul>
+      <hr />
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-center">
+          Total Message From John Doe <span class="badge text-bg-danger rounded-pill">15</span>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-center">
+          Total Message From Susan <span class="badge text-bg-danger rounded-pill">20</span>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-center">
+          Total Message From Alex <span class="badge text-bg-danger rounded-pill">11</span>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-center">
+          Total Message From Bob <span class="badge text-bg-danger rounded-pill">22</span>
+        </li>
+        <li class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-center">
+          Total Message From Carter <span class="badge text-bg-danger rounded-pill">66</span>
+        </li>
+      </ul>
+    </div>
+    <script src="./libs/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
