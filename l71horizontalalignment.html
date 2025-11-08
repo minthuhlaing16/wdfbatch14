@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>horizontalalignment</title>
+    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css" />
+    <style>
+      .row {
+        height: 100px;
+        background: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>horizontal alignment</h1>
+    </div>
+    <div class="container">
+      <div class="row text-light justify-content-start">
+        <div class="col-2 bg-primary">column 1</div>
+        <div class="col-2 bg-info">column 2</div>
+        <div class="col-2 bg-danger">column 3</div>
+      </div>
+      <hr />
+      <div class="row text-light justify-content-center">
+        <div class="col-2 bg-primary">column 1</div>
+        <div class="col-2 bg-info">column 2</div>
+        <div class="col-2 bg-danger">column 3</div>
+      </div>
+      <hr />
+      <div class="row text-light justify-content-end">
+        <div class="col-2 bg-primary">column 1</div>
+        <div class="col-2 bg-info">column 2</div>
+        <div class="col-2 bg-danger">column 3</div>
+      </div>
+      <hr />
+    </div>
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

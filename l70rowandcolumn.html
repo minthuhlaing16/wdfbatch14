@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>row and column</title>
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- ! row hte mar display flex par pee tar -->
+    <!-- ? col khwl mal so row hte mar shi ka mal -->
+    <!-- ? col bae pay mal so yin thu ka loot tat col mhan ta mya yuu mar -->
+    <div class="container">
+      <h1 class="bg-danger text-warning text-center p-2 m-2 border-2 rounded-3">row and column</h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="bg-primary text-light col-12">hello world</h1>
+        <h1 class="bg-danger text-light col-8">hello yangon</h1>
+        <h1 class="bg-warning text-light col">hello mandalay</h1>
+        <h1 class="bg-success text-light col-6">hello bago</h1>
+        <h1 class="bg-secondary text-light col-6">hello chaung thar</h1>
+      </div>
+    </div>
+    <hr />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 bg-primary text-light fs-3">
+          <div class="row">
+            col1
+            <div class="col-6 bg-info">col3</div>
+            <div class="col-3 bg-success">col4</div>
+          </div>
+        </div>
+        <div class="col-6 bg-danger text-light fs-3">col2</div>
+      </div>
+    </div>
+    <hr />
+    <div class="container-fluid">
+      <div class="row fs-3 text-white">
+        <div class="col-6 bg-danger">
+          div1
+          <div class="row">
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-sm-12 bg-primary">div3</div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-sm-12 bg-secondary">div4</div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-sm-12 bg-success">div5</div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-sm-12 bg-dark">div6</div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-sm-12 bg-warning">div7</div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-sm-12 bg-light text-dark">div8</div>
+          </div>
+        </div>
+        <div class="col-6 bg-info">
+          div2
+          <div class="row">
+            <div class="col-md-6 bg-warning">div9</div>
+            <div class="col-6 bg-danger">
+              <div class="row">
+                <div class="col-md-6 bg-dark">div10</div>
+                <div class="col-md-6 bg-success">div11</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
