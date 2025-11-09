@@ -18,6 +18,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- * select2 libs css 1 js 1 -->
+    <link rel="stylesheet" href="libs/select2/select2.min.css" />
+    <!-- * flatpickr lib css 1 js 1 -->
+    <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css" />
+    <!-- * summernote css1 js1 -->
+    <link rel="stylesheet" href="./libs/summernote/summernote-bs5.min.css" />
     <style>
       * {
         font-family: "Atkinson Hyperlegible";
@@ -60,7 +66,7 @@
           <div class="col-md-6 mb-3">
             <label for="country" class="form-label">Country</label>
             <select name="country" id="country" class="form-select rounded-0">
-              <option disabled>Choose a country</option>
+              <option selected disabled>Choose a country</option>
               <option value="mm">Myanmar</option>
               <option value="sg">Singapore</option>
               <option value="my">Malaysia</option>
@@ -137,7 +143,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="dob" class="form-label">Date of birth</label>
-            <input type="date" name="dob" id="dob" class="form-control rounded-0" />
+            <input type="date" name="dob" id="dob" class="form-control rounded-0" placeholder="Birthday" />
           </div>
           <div class="col-md-6 mb-3">
             <label for="nrc" class="form-label">Nrc</label>
@@ -182,8 +188,43 @@
     <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- * jQuery js1 -->
     <script src="libs/jquery/jquery.js"></script>
+    <!-- * select2 libs css 1 js 1 -->
+    <script src="libs/select2/select2.min.js"></script>
+    <!-- * flatpickr lib css 1 js 1 -->
+    <script src="libs/flatpickr/flatpickr.js"></script>
+    <!-- * summernote css1 js1 -->
+    <script src="./libs/summernote/summernote-bs5.min.js"></script>
     <script>
-      $(document).ready(function () {});
+      $(document).ready(function () {
+        // for role
+        $("#roles").select2({
+          placeholder: "Choose Your Role !",
+        });
+
+        // for date
+        $("#dob").flatpickr({
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          minDate: "today",
+        });
+
+        // for textarea
+        $("#bio").summernote({
+          height: 300, // set editor height
+          minHeight: null, // set minimum height of editor
+          maxHeight: null, // set maximum height of editor
+          focus: true, // set focus to editable area after initializing summernote
+          toolbar: [
+            ["style", ["style"]],
+            ["font", ["bold", "underline", "clear"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["table", ["table"]],
+            ["insert", ["link"]],
+            ["view", ["fullscreen", "codeview", "help"]],
+          ],
+        });
+      });
     </script>
   </body>
 </html>
