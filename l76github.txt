@@ -1,0 +1,71 @@
+==> Github
+==> https://github.com
+
+==> Git Download
+==> https://git-scm.com/downloads
+
+==> for linux
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+
+==> check version
+git  (or) git --version
+
+_________________________________________________
+
+==> Git Config
+=> One Time
+
+git config --global user.name ""
+git config user.name
+
+git config --global user.email ""
+git config user.email
+
+_________________________________________________
+
+==> Connect to Github Server (using ssh key)
+
+==> key htoke tat code
+ssh-keygen
+
+==> Get key after generate (for linux)
+
+Method 1
+ls -l ~/.ssh
+cat ~/.ssh/id_rsa.pub
+
+Method 2
+cd ~/.ssh
+ls -l 
+
+=> Github key config
+github profile > Settings > SSH and GPG keys > New SSH key
+
+==> Check ssh connection is successful or not
+ssh -T git@github.com
+
+_________________________________________________
+
+==> Github (code save)
+
+git init
+git status
+git log --oneline
+git add . 
+git add * 
+git add -A 
+git commit -m ""
+git remote add origin 
+git remote show origin
+git push origin master
+
+_______________________________________________________
+
+==> Github Download
+
+git clone "repo link"
+
+_______________________________________________________
+
